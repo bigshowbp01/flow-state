@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Notes — Flow State Training</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #fb923c;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background: #050b14;
+            color: #e2e8f0;
+            margin: 0;
+            line-height: 1.75;
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .agenda-list li {
+            padding: 0.65rem 0.8rem;
+            border-radius: 0.75rem;
+            background: rgba(30, 41, 59, 0.45);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            line-height: 1.7;
+        }
+
+        .script-list > div {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 0.85rem;
+            padding: 0.95rem 1rem;
+        }
+
+        .script-list p,
+        .script-list li {
+            color: #e2e8f0;
+            font-size: 1.02rem;
+            line-height: 1.9;
+        }
+
+        .script-list ul {
+            margin-top: 0.5rem;
+        }
+
+        .key {
+            color: #fde68a;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                line-height: 1.8;
+            }
+
+            .script-list > div {
+                padding: 0.85rem 0.85rem;
+            }
+
+            .script-list p,
+            .script-list li,
+            .agenda-list li {
+                font-size: 0.98rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <main class="max-w-5xl mx-auto px-4 md:px-6 py-6 md:py-10">
+        <header class="mb-8">
+            <div class="inline-flex items-center gap-2 rounded-full bg-orange-500/15 px-4 py-1 text-sm text-orange-300 border border-orange-500/30">
+                Speaker Notes
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold mt-4 leading-tight">Flow State Training — ผู้บรรยาย</h1>
+            <p class="text-slate-400 mt-2 text-sm md:text-base">ใช้หน้านี้สำหรับดูสคริปต์และโครงสร้างคลาสระหว่างบรรยาย</p>
+        </header>
+
+        <section class="glass rounded-2xl p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-white mb-4">🗓️ โครงสร้างคลาส (Agenda: 09.00 - 12.00)</h2>
+            <ul class="agenda-list space-y-3 text-slate-200">
+                <li>09.00 - 09.15 (15 นาที): 1. Icebreaker ละลายพฤติกรรม & ค้นหาความทรงจำที่หายไป</li>
+                <li>09.15 - 09.45 (30 นาที): 2. เข้าเนื้อหา What is Flow? และวิทยาศาสตร์ของสมอง</li>
+                <li>09.45 - 10.15 (30 นาที): 3. กิจกรรมกลุ่ม (Pre-break) & เงื่อนไขการเกิด Flow</li>
+                <li>10.15 - 10.30 (15 นาที): ☕ พักเบรก</li>
+                <li>10.30 - 10.45 (15 นาที): 4. ศัตรูตัวฉกาจของ Flow (Disruptions)</li>
+                <li>10.45 - 11.20 (35 นาที): 5. กิจกรรม The Lego Challenge (เข้าสู่สภาวะ Flow)</li>
+                <li>11.20 - 11.35 (15 นาที): 6. ถอดบทเรียนจากเลโก้ (Debrief)</li>
+                <li>11.35 - 11.45 (10 นาที): 7. บทสรุป และ เทคนิคสั่งการสมองให้อยู่ใน Zone</li>
+                <li>11.45 - 11.55 (10 นาที): 8. Kahoot! ตอบคำถามชิงรางวัล</li>
+                <li>11.55 - 12.00 (5 นาที): 9. Q&A และประเมินผ่าน Slido</li>
+            </ul>
+        </section>
+
+        <section class="glass rounded-2xl p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-white mb-4">🎤 Script การพูด: "แฮ็กสมองสู่ Flow State: สมาธิในโลกยุคดิจิทัล"</h2>
+
+            <div class="space-y-6 script-list">
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[1. เปิดเรื่อง - ดึงความสนใจด้วยประสบการณ์ร่วม]</h3>
+                    <p class="mt-2 text-slate-200">(เดินขึ้นเวที ยิ้มแย้ม สบายๆ เป็นกันเอง)</p>
+                    <p class="mt-2 text-slate-200"><span class="key">“สวัสดีครับทุกคน... มีใครในห้องนี้เคยมีช่วงเวลาที่ทำอะไรเพลินๆ จนลืมโลกไหมครับ? สำหรับผม บางทีมันคือตอนที่กำลังเขียนโค้ดแก้บั๊กตอนดึกๆ จังหวะที่กำลังทรงตัวอยู่บนเวคบอร์ด หรือตอนกำลังชู้ตบาส... รู้ตัวอีกที อ้าว! ผ่านไป 3 ชั่วโมงแล้ว ความหิวหายไป ความง่วงไม่มี เสียงในหัวที่คอยบ่นนู่นนี่นั่นเงียบสนิท มีแค่ตัวเรากับสิ่งที่อยู่ตรงหน้า... ใครเคยฟินกับความรู้สึกแบบนี้บ้างครับ ขอเจอมือหน่อย”</span> (ยิ้มและผายมือให้คนดูยกมือ)</p>
+                    <p class="mt-2 text-slate-200"><span class="key">“เยี่ยมเลยครับ ให้เวลาสั้นๆ 1 นาที หันไปขิงใส่เพื่อนข้างๆ หน่อยครับว่า กิจกรรมที่ทำให้คุณลืมเวลาได้คืออะไร”</span></p>
+                    <p class="mt-2 text-slate-200">(เปิดเพลงจังหวะสบายๆ ให้คนคุยกัน)</p>
+                    <p class="mt-2 text-slate-200"><span class="key">“ขอบคุณครับ... อาการลืมโลก ลืมเวลา ที่เราเพิ่งคุยกัน ฝรั่งและนักวิทยาศาสตร์เขาเรียกมันว่า 'สภาวะ Flow State' ครับ... แต่วันนี้ผมจะมาเล่าให้ฟังว่า จริงๆ แล้วมันก็คือเรื่องเดียวกับที่พระพุทธองค์สอนเรามาตลอด นั่นคือสภาวะของ 'สมาธิ' ที่มี 'สติ' กำกับอยู่นั่นเองครับ”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[2. เข้าเนื้อหา - วิทยาศาสตร์พบกับธรรมะ]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“เวลาที่เราเข้าสู่ Flow State หรือตอนที่เรามีสมาธิจดจ่อมากๆ งานวิจัยทางสมอง (Neuroscience) ค้นพบความจริงที่น่าทึ่งอย่างหนึ่งครับ... คือสมองเราไม่ได้ทำงาน 'หนักขึ้น' นะครับ แต่มันใช้พลังงาน 'ลดลง'”</span></p>
+                    <p class="mt-2 text-slate-200"><span class="key">“สมองส่วนหน้าที่เรียกว่า Prefrontal Cortex ซึ่งปกติจะคอยคิดวิเคราะห์ กังวล กะเกณฑ์ หรือถ้าพูดภาษาธรรมะคือส่วนที่สร้าง 'อัตตา' หรือ 'ตัวกูของกู'... มันจะถูกหรี่สวิตช์ลงชั่วคราวครับ พอความรู้สึกถึงตัวตนมันหายไป เราถึงไม่รู้สึกเหนื่อย ไม่รู้สึกกลัว สมองจะหลั่งสารความสุขอย่างโดปามีนออกมา คลื่นสมองจะสงบลงไปอยู่ในระดับคลื่น Alpha และ Theta ซึ่งเป็นคลื่นความถี่เดียวกับตอนที่เรานั่งสมาธิลึกๆ เลยครับ”</span></p>
+                    <p class="mt-2 text-slate-200"><span class="key">“คำถามคือ แล้วเราจะดึงเอาสภาวะ 'ตื่นรู้' แบบนี้ มาใช้กับการทำงานในออฟฟิศทุกๆ วันได้ยังไง?”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[3. กิจกรรมกลุ่ม - ทางสายกลางของการทำงาน]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“กฎเหล็กข้อแรกของ Flow คือ 'มัชฌิมาปฏิปทา' หรือทางสายกลางครับ... ถ้างานมันง่ายไป เราจะเบื่อ (ถีนมิทธะ - ความหดหู่เคลิบเคลิ้ม) แต่ถ้างานมันยากไป เราจะเครียด (อุทธัจจะ - ความฟุ้งซ่านรำคาญใจ) สภาวะ Flow จะเกิดตรงจุดสมดุลพอดี คือจุดที่ความท้าทายของงาน มันสูงกว่าสกิลที่เรามีอยู่นิดหน่อย ประมาณ 4% เพื่อให้เราต้องงัดเอาความพยายามออกมาใช้”</span></p>
+                    <p class="mt-2 text-slate-200"><span class="key">“เดี๋ยวเรามาลองสำรวจตัวเองกันครับ ให้แต่ละโต๊ะระดมสมอง 5 นาที แบ่งงานในชีวิตประจำวันออกเป็น 3 กอง: งานที่น่าเบื่อ งานที่เครียดปวดหัว และงานที่ทำแล้วลื่นไหล... แล้วเดี๋ยวส่งตัวแทนแชร์ให้เพื่อนฟังหน่อยครับ”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[4. กลับจากเบรก - ตัดนิวรณ์ (สิ่งรบกวน)]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“เมื่อกี้เราเห็นแล้วว่างานแบบไหนทำให้เรา Flow... แต่รู้ไหมครับว่าอะไรคือศัตรูตัวร้ายที่สุดในยุคนี้? ... มันคือ 'Notification จากมือถือ' และการพยายามทำหลายๆ อย่างพร้อมกัน (Multitasking) ครับ”</span></p>
+                    <p class="mt-2 text-slate-200"><span class="key">“ในทางธรรม สิ่งเหล่านี้คือ 'นิวรณ์' หรือสิ่งกีดขวางสมาธิ งานวิจัยบอกเลยนะครับว่า แค่คุณละสายตาจากงานไปดูไลน์แว้บเดียว สมองจะรวนทันที และคุณต้องใช้เวลาเฉลี่ยถึง 20 กว่านาที กว่าจะดึงสติให้กลับมาโฟกัสได้ลึกเท่าเดิม... ดังนั้น ใครคุมมือถือได้ คนนั้นคุมสติและศักยภาพตัวเองได้ครับ”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[5. กิจกรรม Lego - ฝึกเข้าสู่ Flow]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“คุยทฤษฎีมาเยอะแล้ว เรามาลองปฏิบัติบูชากันดีกว่า บนโต๊ะมีเลโก้ 200 ชิ้น กติกาการเข้าสู่ Flow มี 3 ข้อครับ:”</span></p>
+                    <ul class="list-disc pl-6 mt-2 text-slate-200">
+                        <li><span class="key">เป้าหมายชัดเจน:</span> ต่อให้เสร็จ</li>
+                        <li><span class="key">รู้ผลทันที:</span> ชิ้นไหนต่อผิด ต่อไม่ลงล็อค เราจะรู้ตัวแล้วแก้เลย (เหมือนการมีสติรู้ทันความคิด)</li>
+                        <li><span class="key">ตัดสิ่งรบกวน:</span> ขอให้ทุกคนคว่ำหน้าจอมือถือลงครับ</li>
+                    </ul>
+                    <p class="mt-2 text-slate-200"><span class="key">“เราจะใช้เวลา 30 นาทีนี้ โฟกัสอยู่กับปัจจุบันขณะ ผมจะช่วยปรับบรรยากาศโดยเปิดคลื่นเสียงความถี่พิเศษ (Binaural Beats) ที่จูนเข้ากับคลื่นสมอง Alpha เพื่อให้ทุกคนเข้าสมาธิได้ง่ายขึ้น... ถ้าพร้อมแล้ว เริ่มครับ!”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[6. พูดคุยหลังกิจกรรม (Debrief)]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“เป็นยังไงบ้างครับ? เวลาผ่านไปเร็วกว่าปกติไหม? มีใครรู้สึกเหมือนหูดับ ไม่ได้ยินเสียงแอร์ เสียงคนคุยกันเลยบ้าง? นั่นแหละครับ คุณเพิ่งก้าวขาเข้าไปใน Flow State เรียบร้อยแล้ว พอเรามีเป้าหมายที่ชัดเจน และตัดสิ่งรบกวนออกไป จิตเราจะมีอารมณ์เป็นหนึ่งเดียว หรือที่เรียกว่า 'เอกัคคตารมณ์' แล้วสภาวะตื่นรู้ก็ตามมาทันทีครับ”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[7. สรุปเนื้อหา]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“ก่อนเริ่มงานสำคัญในวันพรุ่งนี้ ผมอยากชวนทุกคนลองนำเทคนิคนี้ไปใช้นะครับ:”</span></p>
+                    <ul class="list-disc pl-6 mt-2 text-slate-200">
+                        <li><span class="key">บล็อกเวลา (Time Block):</span> ให้ตัวเองเลย 1-2 ชั่วโมง</li>
+                        <li><span class="key">ปิด Notification:</span> ตัดนิวรณ์ให้หมด</li>
+                        <li><span class="key">อานาปานสติก่อนเริ่ม:</span> หายใจเข้า 4 วินาที กลั้นไว้ 4 วินาที แล้วค่อยๆ ปล่อยออกยาวๆ 8 วินาที สัก 3-4 รอบ เพื่อปรับระบบประสาทให้ร่างกายนิ่งที่สุด</li>
+                        <li><span class="key">ทำทีละอย่าง (Single-tasking):</span> อยู่กับปัจจุบันขณะเท่านั้น</li>
+                    </ul>
+                    <p class="mt-2 text-slate-200"><span class="key">“ถ้าเราฝึกเข้าสู่ Flow State ได้บ่อยๆ งานที่เราทำมันจะไม่ได้เป็นแค่ภาระอีกต่อไป แต่มันจะกลายเป็นการปฏิบัติธรรมในชีวิตประจำวัน... งานก็สำเร็จด้วยดี และใจเราก็มีความสุข มีความเบาสบาย โดยที่เราไม่ต้องฝืนอะไรเลยครับ ขอบคุณครับ”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[8. ควิซสนุกๆ ชิงรางวัล]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“ก่อนจากกัน วันนี้เรามีเกม Kahoot สนุกๆ มาทบทวนความรู้ทั้งฝั่งวิทย์และฝั่งธรรมะกันนิดนึง ใครตอบไว ตอบถูก มีรางวัลพิเศษให้ด้วยครับ เตรียมมือถือขึ้นมาสแกนได้เลย!”</span></p>
+                </div>
+
+                <div class="border-l-4 border-orange-400 pl-4">
+                    <h3 class="text-xl font-semibold text-orange-300">[9. Q&A และประเมินผ่าน Slido]</h3>
+                    <p class="mt-2 text-slate-200"><span class="key">“เปิดช่วง Q&A ครับ และอย่าลืมสแกน Slido เพื่อประเมินคลาสวันนี้ด้วยนะครับ ขอบคุณครับ”</span></p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-slate-500 text-sm">พิมพ์หน้านี้เพื่อเป็นโพย หรือเปิดบน iPad ระหว่างบรรยาย</footer>
+    </main>
+</body>
+</html>
