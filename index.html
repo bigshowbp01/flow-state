@@ -990,6 +990,16 @@
         </div>
     </div>
 
+    <script type="importmap">
+        {
+            "imports": {
+                "firebase/app": "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js",
+                "firebase/analytics": "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js"
+            }
+        }
+    </script>
+    <script type="module" src="./firebase-config.js"></script>
+
     <script>
         const slides = document.querySelectorAll('.slide');
         const progressCompleted = document.getElementById('progress-completed');
