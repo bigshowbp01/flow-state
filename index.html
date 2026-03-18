@@ -214,6 +214,13 @@
             z-index: 1;
             border-radius: 1.5rem;
             animation: flowImageBreathingGlowImage 3.8s ease-in-out infinite;
+            cursor: pointer;
+            transition: opacity 0.32s ease, transform 0.32s ease;
+        }
+
+        .flow-image-slide .flow-full-image.is-fading {
+            opacity: 0.16;
+            transform: scale(0.985);
         }
 
         .flow-equation-slide .equation-layout {
@@ -366,6 +373,521 @@
             background: #020617;
         }
 
+        .flow-benefits-slide .glass-panel {
+            max-width: 1320px;
+        }
+
+        .flow-benefits-slide .benefit-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.95rem;
+            margin-top: 0.6rem;
+            max-width: 1020px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flow-benefits-slide .benefit-item {
+            display: flex;
+            gap: 0.85rem;
+            align-items: flex-start;
+            background: rgba(15, 23, 42, 0.58);
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            border-radius: 0.95rem;
+            padding: 0.95rem 1rem;
+            opacity: 0;
+            transform: translateY(18px) scale(0.985);
+            transition: transform 0.52s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.52s ease;
+        }
+
+        .slide.active.flow-benefits-slide .benefit-item {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .slide.active.flow-benefits-slide .benefit-item:nth-child(1) { transition-delay: 0.12s; }
+        .slide.active.flow-benefits-slide .benefit-item:nth-child(2) { transition-delay: 0.2s; }
+        .slide.active.flow-benefits-slide .benefit-item:nth-child(3) { transition-delay: 0.28s; }
+        .slide.active.flow-benefits-slide .benefit-item:nth-child(4) { transition-delay: 0.36s; }
+        .slide.active.flow-benefits-slide .benefit-item:nth-child(5) { transition-delay: 0.44s; }
+
+        .flow-benefits-slide .benefit-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.05rem;
+            height: 2.05rem;
+            border-radius: 9999px;
+            background: rgba(245, 158, 11, 0.16);
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35);
+            font-size: 1.16rem;
+            line-height: 1;
+            color: #f59e0b;
+            filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35));
+            transform: translateY(2px);
+        }
+
+        .flow-benefits-slide .benefit-title {
+            font-size: 1.38rem;
+            line-height: 1.7rem;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .flow-benefits-slide .benefit-key {
+            color: #fbbf24;
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.34);
+        }
+
+        .flow-benefits-slide .benefit-desc {
+            font-size: 1.14rem;
+            line-height: 1.62rem;
+            color: #e2e8f0;
+            margin-top: 0.05rem;
+        }
+
+        .flow-benefits-slide .benefit-desc-em {
+            color: #7dd3fc;
+            font-weight: 700;
+        }
+
+        .flow-benefits-slide .benefit-quote {
+            margin-top: 1rem;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(251, 146, 60, 0.36);
+            border-radius: 0.95rem;
+            padding: 1rem 1.2rem;
+            color: #f8fafc;
+            font-size: 1.32rem;
+            line-height: 1.9rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            max-width: 1020px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flow-benefits-slide .benefit-quote-key {
+            color: #fb923c;
+            text-shadow: 0 0 10px rgba(251, 146, 60, 0.33);
+        }
+
+        .real-life-flow-slide .glass-panel {
+            max-width: 1360px;
+            background: rgba(15, 29, 51, 0.72);
+            border: 1px solid rgba(148, 163, 184, 0.26);
+            border-radius: 1.4rem;
+            padding: 2.2rem 2.3rem 1.8rem;
+        }
+
+        .real-life-flow-slide .real-title {
+            font-size: clamp(2.35rem, 5vw, 4.3rem);
+            line-height: 1.1;
+            color: #d7e3f7;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.6rem;
+            text-align: left;
+            width: 100%;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.9);
+        }
+
+        .real-life-flow-slide .real-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .real-life-flow-slide .real-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .real-life-flow-slide .real-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 0.2rem;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .real-life-flow-slide .real-head {
+            font-size: clamp(1.45rem, 2.3vw, 2.1rem);
+            line-height: 1.2;
+            font-weight: 700;
+            color: #e2e8f0;
+            text-transform: uppercase;
+            margin-top: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .real-life-flow-slide .real-icon {
+            display: inline-flex;
+            width: 1.8rem;
+            height: 1.8rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            background: rgba(245, 158, 11, 0.14);
+            color: #f59e0b;
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35);
+            font-size: 1rem;
+            line-height: 1;
+            transform: translateY(-1px);
+        }
+
+        .real-life-flow-slide .real-head-text {
+            color: #cbd5e1;
+            letter-spacing: 0.01em;
+        }
+
+        .real-life-flow-slide .real-sub {
+            font-size: clamp(1.2rem, 1.75vw, 1.8rem);
+            line-height: 1.22;
+            color: #e2e8f0;
+            font-weight: 500;
+            margin-top: -0.15rem;
+        }
+
+        .real-life-flow-slide .real-body {
+            font-size: clamp(1.28rem, 1.55vw, 1.6rem);
+            line-height: 1.48;
+            color: #cbd5e1;
+            min-height: 5.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .real-life-flow-slide .real-em {
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .real-life-flow-slide .real-zone {
+            color: #fb923c;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(251, 146, 60, 0.25);
+        }
+
+        .real-life-flow-slide .real-calm {
+            color: #86efac;
+            font-weight: 700;
+        }
+
+        .real-life-flow-slide .real-quote {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: clamp(1.62rem, 2.3vw, 2.3rem);
+            line-height: 1.35;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .real-life-flow-slide .real-quote-highlight {
+            color: #fb923c;
+            text-shadow: 0 0 10px rgba(251, 146, 60, 0.32);
+        }
+
+        .real-life-flow-slide .real-quote-productivity {
+            color: #fbbf24;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: rgba(251, 191, 36, 0.9);
+            text-underline-offset: 6px;
+        }
+
+        .real-life-flow-slide .real-quote-number {
+            color: #86efac;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: rgba(134, 239, 172, 0.9);
+            text-underline-offset: 6px;
+        }
+
+        .flow-action-slide .glass-panel {
+            max-width: 1380px;
+            background: rgba(6, 24, 45, 0.75);
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            border-radius: 1.2rem;
+            padding: 2rem 2rem 1.6rem;
+        }
+
+        .flow-action-slide .action-layout {
+            display: grid;
+            grid-template-columns: minmax(180px, 0.75fr) minmax(0, 2.25fr);
+            gap: 1.35rem;
+            align-items: start;
+        }
+
+        .flow-action-slide .action-title {
+            color: #dbeafe;
+            font-size: clamp(2.35rem, 5vw, 4.6rem);
+            line-height: 1.06;
+            font-weight: 500;
+            letter-spacing: 0.015em;
+            margin-top: 0.25rem;
+        }
+
+        .flow-action-slide .action-side {
+            width: 100%;
+        }
+
+        .flow-action-slide .action-divider {
+            width: 100%;
+            height: 1px;
+            margin: 0.8rem 0 1rem;
+            background: linear-gradient(90deg, rgba(148, 163, 184, 0.9), rgba(148, 163, 184, 0.2));
+        }
+
+        .flow-action-slide .action-video-stack {
+            width: min(260px, 100%);
+            display: grid;
+            gap: 0.7rem;
+        }
+
+        .flow-action-slide .action-video-panel {
+            overflow: hidden;
+            transition: max-height 0.38s ease, opacity 0.3s ease, transform 0.38s ease;
+            transform-origin: top center;
+        }
+
+        .flow-action-slide .action-video-panel.is-shown {
+            max-height: 520px;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .flow-action-slide .action-video-panel.is-hidden {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-6px) scale(0.97);
+            pointer-events: none;
+        }
+
+        .flow-action-slide .action-expand-toggle {
+            width: 100%;
+            border: 1px solid rgba(125, 211, 252, 0.42);
+            background: rgba(15, 23, 42, 0.82);
+            color: #bae6fd;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-radius: 0.7rem;
+            padding: 0.52rem 0.72rem;
+            cursor: pointer;
+            transition: all 0.22s ease;
+        }
+
+        .flow-action-slide .action-expand-toggle:hover {
+            border-color: rgba(56, 189, 248, 0.75);
+            color: #e0f2fe;
+            background: rgba(12, 74, 110, 0.55);
+        }
+
+        .flow-action-slide .action-video-wrap {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            border-radius: 0.9rem;
+            overflow: hidden;
+            border: 1px solid rgba(125, 211, 252, 0.38);
+            box-shadow: 0 16px 34px rgba(2, 6, 23, 0.55);
+            background: #020617;
+        }
+
+        .flow-action-slide .action-video {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .flow-action-slide .action-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem 1.15rem;
+        }
+
+        .flow-action-slide .action-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .flow-action-slide .action-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 0.18rem;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .flow-action-slide .action-head {
+            margin-top: 0.18rem;
+            color: #9ec3e8;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: clamp(1.28rem, 2vw, 1.95rem);
+            line-height: 1.2;
+        }
+
+        .flow-action-slide .action-text {
+            color: #d7e5f8;
+            font-size: clamp(0.98rem, 1.45vw, 1.4rem);
+            line-height: 1.45;
+        }
+
+        .flow-action-slide .action-card:nth-child(4) {
+            grid-column: 1 / span 1;
+        }
+
+        .flow-action-slide .action-card:nth-child(5) {
+            grid-column: 2 / span 1;
+        }
+
+        .flow-action-slide .action-card:nth-child(6) {
+            grid-column: 3 / span 1;
+        }
+
+        .flow-cocktail-slide .glass-panel {
+            max-width: 1380px;
+            background: rgba(8, 28, 48, 0.78);
+            border: 1px solid rgba(148, 163, 184, 0.26);
+            border-radius: 1.25rem;
+            padding: 1.6rem 1.7rem 1.2rem;
+        }
+
+        .flow-cocktail-slide .cocktail-title {
+            font-size: clamp(2rem, 4.1vw, 3.6rem);
+            line-height: 1.1;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-bottom: 0.45rem;
+        }
+
+        .flow-cocktail-slide .cocktail-sub {
+            color: #bae6fd;
+            font-size: 1.05rem;
+            line-height: 1.45;
+            margin-bottom: 0.95rem;
+        }
+
+        .flow-cocktail-slide .cocktail-scroll {
+            max-height: calc(100vh - 16.5rem);
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .flow-cocktail-slide .cocktail-scroll::-webkit-scrollbar {
+            width: 9px;
+        }
+
+        .flow-cocktail-slide .cocktail-scroll::-webkit-scrollbar-thumb {
+            background: rgba(56, 189, 248, 0.38);
+            border-radius: 9999px;
+        }
+
+        .flow-cocktail-slide .cocktail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.85rem;
+        }
+
+        .flow-cocktail-slide .cocktail-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-left-width: 6px;
+            border-radius: 0.95rem;
+            padding: 0.82rem 0.9rem;
+        }
+
+        .flow-cocktail-slide .cocktail-card:nth-child(1) { border-left-color: #fb923c; }
+        .flow-cocktail-slide .cocktail-card:nth-child(2) { border-left-color: #38bdf8; }
+        .flow-cocktail-slide .cocktail-card:nth-child(3) { border-left-color: #f43f5e; }
+        .flow-cocktail-slide .cocktail-card:nth-child(4) { border-left-color: #a78bfa; }
+        .flow-cocktail-slide .cocktail-card:nth-child(5) { border-left-color: #4ade80; }
+
+        .flow-cocktail-slide .cocktail-card:nth-child(5) {
+            grid-column: 1 / -1;
+            max-width: calc(50% - 0.425rem);
+            margin: 0 auto;
+        }
+
+        .flow-cocktail-slide .cocktail-head {
+            margin: 0;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            color: #f8fafc;
+            font-weight: 700;
+        }
+
+        .flow-cocktail-slide .cocktail-main {
+            letter-spacing: 0.02em;
+        }
+
+        .flow-cocktail-slide .cocktail-card:nth-child(1) .cocktail-main {
+            color: #fb923c;
+            text-shadow: 0 0 10px rgba(251, 146, 60, 0.28);
+        }
+
+        .flow-cocktail-slide .cocktail-card:nth-child(2) .cocktail-main {
+            color: #38bdf8;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.28);
+        }
+
+        .flow-cocktail-slide .cocktail-card:nth-child(3) .cocktail-main {
+            color: #fb7185;
+            text-shadow: 0 0 10px rgba(251, 113, 133, 0.26);
+        }
+
+        .flow-cocktail-slide .cocktail-card:nth-child(4) .cocktail-main {
+            color: #a78bfa;
+            text-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
+        }
+
+        .flow-cocktail-slide .cocktail-card:nth-child(5) .cocktail-main {
+            color: #4ade80;
+            text-shadow: 0 0 10px rgba(74, 222, 128, 0.26);
+        }
+
+        .flow-cocktail-slide .cocktail-head .thai {
+            color: #cbd5e1;
+            font-weight: 600;
+            font-size: 0.94rem;
+        }
+
+        .flow-cocktail-slide .cocktail-what {
+            margin: 0.42rem 0 0.5rem;
+            color: #e2e8f0;
+            font-size: 0.93rem;
+            line-height: 1.45;
+        }
+
+        .flow-cocktail-slide .cocktail-list {
+            margin: 0;
+            padding-left: 1.05rem;
+            color: #dbeafe;
+            font-size: 0.9rem;
+            line-height: 1.42;
+        }
+
+        .flow-cocktail-slide .cocktail-list li + li {
+            margin-top: 0.22rem;
+        }
+
+        .flow-cocktail-slide .cocktail-list strong {
+            color: #f8fafc;
+        }
+
+        .flow-cocktail-slide .key-msg {
+            color: #fcd34d;
+            font-weight: 700;
+            text-shadow: 0 0 9px rgba(252, 211, 77, 0.22);
+        }
+
         @media (min-width: 1024px) {
             .what-is-flow-slide .content-layout {
                 display: grid;
@@ -377,6 +899,11 @@
             .what-is-flow-slide .video-sequence {
                 flex-wrap: nowrap;
                 justify-content: flex-end;
+            }
+
+            .flow-benefits-slide .benefit-grid {
+                grid-template-columns: repeat(2, minmax(0, 480px));
+                justify-content: center;
             }
         }
 
@@ -415,6 +942,65 @@
                 position: static;
                 margin-top: 0.8rem;
                 justify-items: start;
+            }
+
+            .real-life-flow-slide .glass-panel {
+                padding: 1.35rem 1.2rem 1.2rem;
+            }
+
+            .real-life-flow-slide .real-grid {
+                grid-template-columns: 1fr;
+                gap: 1.05rem;
+            }
+
+            .real-life-flow-slide .real-body {
+                min-height: 0;
+            }
+
+            .real-life-flow-slide .real-quote {
+                margin-top: 1.1rem;
+                text-underline-offset: 4px;
+            }
+
+            .flow-action-slide .glass-panel {
+                padding: 1.3rem 1.1rem 1.15rem;
+            }
+
+            .flow-action-slide .action-layout {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .flow-action-slide .action-video-stack {
+                width: min(280px, 100%);
+            }
+
+            .flow-action-slide .action-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .flow-action-slide .action-card:nth-child(4),
+            .flow-action-slide .action-card:nth-child(5),
+            .flow-action-slide .action-card:nth-child(6) {
+                grid-column: auto;
+            }
+
+            .flow-cocktail-slide .glass-panel {
+                padding: 1.2rem 1rem 0.95rem;
+            }
+
+            .flow-cocktail-slide .cocktail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-cocktail-slide .cocktail-card:nth-child(5) {
+                grid-column: auto;
+                max-width: none;
+            }
+
+            .flow-cocktail-slide .cocktail-scroll {
+                max-height: calc(100vh - 14rem);
             }
         }
 
@@ -576,18 +1162,19 @@
             position: absolute;
             top: -22px;
             left: 0;
-            width: 36px;
-            height: 36px;
+            width: 42px;
+            height: 30px;
             filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.6));
             transform: translateX(-50%);
             will-change: transform;
             transition: opacity 0.2s ease;
         }
 
-        #progress-ship svg {
+        #progress-ship img {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: contain;
         }
 
         @keyframes gradientMove {
@@ -732,10 +1319,10 @@
             <div class="slide-overlay"></div>
 
             <div class="glass-panel">
-                <h2 class="text-4xl md:text-5xl font-bold mb-10 text-white border-b border-slate-700 pb-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white border-b border-slate-700 pb-4">
                     Hello, <span class="highlight">World! 🌍</span>
                 </h2>
-                <div class="content-layout layout-reverse">
+                <div class="content-layout layout-reverse" style="margin-top: -0.45rem;">
                     <div class="flex-1 space-y-6">
                         <div class="bullet-item">
                             <span class="bullet-icon">💻</span>
@@ -770,8 +1357,8 @@
                             <span class="bullet-icon">🐢</span>
                             <span class="text-slate-200">
                                 <strong class="text-orange-400">Life Balance:</strong>
-                                รักษาสมดุลชีวิตด้วยความเรียบง่าย ผ่านการดูแลครอบครัว แบ่งปันสิ่งดีๆ ให้คนรอบข้าง และใช้เวลาคุณภาพกับสัตว์เลี้ยง
-                                (<span class="text-yellow-200 font-semibold">แมว</span>
+                                รักษาสมดุลชีวิตด้วยความเรียบง่าย แบ่งปันสิ่งดีๆ ให้คนรอบข้าง และใช้เวลาคุณภาพกับสัตว์เลี้ยง
+                                (<span class="text-yellow-200 font-semibold">แมว 6 ตัว</span>
                                 และ <span class="text-yellow-200 font-semibold">เต่าแก้มแดง</span>)
                             </span>
                         </div>
@@ -787,7 +1374,7 @@
                     </div>
 
                     <div class="flex-1 w-full flex flex-col items-center justify-center">
-                        <div class="relative mt-6 flex items-center justify-center">
+                        <div class="relative mt-2 flex items-center justify-center">
                             <div
                                 class="absolute -inset-4 rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-orange-400 blur-2xl opacity-60 animate-[pulse_3s_ease-in-out_infinite]">
                             </div>
@@ -878,7 +1465,7 @@
 
         <section class="slide what-is-flow-slide">
             <div class="slide-bg"
-                style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20250906/pngtree-dynamic-basketball-player-digital-art-wireframe-slam-dunk-image_18875404.webp');">
+                style="background-image: url('Gemini_Generated_Image_l75fcll75fcll75f.png');">
             </div>
             <div class="slide-overlay"></div>
 
@@ -890,21 +1477,24 @@
                     <div class="flex-1 space-y-6">
                         <div class="bullet-item">
                             <span class="bullet-icon">🌊</span>
-                            <span>การที่ <strong class="term-action">"การกระทำ"</strong> และ <strong class="term-focus">"ความสนใจ"</strong>
-                                หลอมรวมเป็นหนึ่งเดียว นักกีฬาเรียกว่า "The Zone"</span>
+                            <span>สภาวะที่ <strong class="term-action">"การกระทำ"</strong> และ <strong class="term-focus">"ความสนใจ"</strong>
+                                รวมเป็นหนึ่งเดียว นักกีฬาเรียกว่า "The Zone"</span>
+                        </div>
+                        <div class="bullet-item">
+                            <span class="bullet-icon">⏱️</span>
+                            <span>เวลาผ่านไปโดยไม่รู้ตัว เหมือนเดินช้าลงหรือเร็วขึ้น</span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon">🧠</span>
-                            <span>สมองเข้าสู่คลื่น <strong class="term-wave">Alpha–Theta</strong> (ระดับเดียวกับการทำสมาธิลึก) ตัวตน (Ego)
-                                ลดลง</span>
+                            <span>สมองเข้าสู่ระดับคลื่น <strong class="term-wave">Alpha–Theta</strong> ความคิดฟุ้งซ่านหายไป สมองจดจ่อ 100%</span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon">🔬</span>
-                            <span><strong class="term-science">วิทยาศาสตร์พบว่า:</strong> ใช้พลังงานน้อยลง แต่ผลลัพธ์พุ่ง</span>
+                            <span><strong class="term-science">เราโฟกัสได้ลึก</strong> งานออกมาดีที่สุดโดยไม่รู้สึกฝืน และมนุษย์ใช้ศักยภาพได้สูงสุดในช่วงนี้</span>
                         </div>
                         <div class="speaker-note">
                             <strong>💡 Neuroscience Insight:</strong>
-                            สภาวะ Transient Hypofrontality ทำให้คลายกังวล คล้ายสภาวะ "เอกัคคตา" (จิตตั้งมั่นเป็นหนึ่ง)
+                            "งานวิจัยยืนยันว่าในภาวะ Flow State สมองจะตัดการทำงานที่ไม่จำเป็นออก เพื่อให้ใช้พลังงานน้อยลง แต่สร้างผลลัพธ์ที่สูงขึ้น" ช่วยลดความกังวลและสยบเสียงในหัว 
                         </div>
                     </div>
                     <div class="flex-1 flex justify-center w-full">
@@ -939,6 +1529,186 @@
             </div>
         </section>
 
+        <section class="slide flow-benefits-slide">
+            <div class="slide-bg"
+                style="background-image: url('unlocking-brain-potential-stockcake.webp'); opacity: 0.24;">
+            </div>
+            <div class="slide-overlay"></div>
+
+            <div class="glass-panel">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white border-b border-slate-700 pb-4">
+                    ปลดล็อกพลัง <span class="highlight">FLOW</span>: แล้วได้อะไร ?
+                </h2>
+
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📈</span>
+                        <div>
+                            <p class="benefit-title"><span class="benefit-key">Productivity</span> &amp; <span class="benefit-key">Quality</span></p>
+                            <p class="benefit-desc">ทะยานสู่จุดสูงสุดแบบ<span class="benefit-desc-em">ก้าวกระโดด</span></p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🌊</span>
+                        <div>
+                            <p class="benefit-title"><span class="benefit-key">Deep Work</span> ไร้ขีดจำกัด</p>
+                            <p class="benefit-desc">ลื่นไหล... <span class="benefit-desc-em">ลาขาดความเหนื่อยล้า</span></p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✨</span>
+                        <div>
+                            <p class="benefit-title"><span class="benefit-key">The Joy of Process</span></p>
+                            <p class="benefit-desc">สัมผัสความสุขในทุกขณะ - ไม่ใช่แค่รอที่เส้นชัย</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💡</span>
+                        <div>
+                            <p class="benefit-title"><span class="benefit-key">Creativity Surge</span></p>
+                            <p class="benefit-desc">ระเบิดไอเดียสร้างสรรค์ <span class="benefit-desc-em">ไร้ทางตัน</span></p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🚀</span>
+                        <div>
+                            <p class="benefit-title"><span class="benefit-key">Accelerated Learning</span></p>
+                            <p class="benefit-desc">ย่นระยะเวลาการฝึกฝน - <span class="benefit-desc-em">อัปเกรด Skill ให้ถึงขีดสุด</span></p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎯</span>
+                        <div>
+                            <p class="benefit-title"><span class="benefit-key">Skill Mastery</span></p>
+                            <p class="benefit-desc">พัฒนาทักษะทางลัด ด้วย<span class="benefit-desc-em">สมาธิขั้นสุด</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="benefit-quote">"<span class="benefit-quote-key">FLOW</span>: เครื่องเร่งศักยภาพมนุษย์ - โดยไม่ต้องจ่ายพลังงานเพิ่ม"</p>
+            </div>
+        </section>
+
+        <section class="slide real-life-flow-slide">
+            <div class="slide-bg"
+                style="background-image: url('รูปภาพ9.png'); opacity: 0.22; filter: blur(1.5px);">
+            </div>
+            <div class="slide-overlay"></div>
+
+            <div class="glass-panel">
+                <h2 class="real-title">Real-Life Flow</h2>
+
+                <div class="real-grid">
+                    <article class="real-card">
+                        <img src="รูปภาพ1.png" alt="Focused professional working on laptop" class="real-image">
+                        <h3 class="real-head"><span class="real-icon">💼</span><span class="real-head-text">FOCUSED PROFESSIONAL</span></h3>
+                        <p class="real-sub">High <span class="highlight">concentration</span></p>
+                        <p class="real-body">ทำงานแล้วเวลาผ่านไปเร็วมาก รู้สึก <span class="real-em">"ลื่น"</span> ไม่สะดุด</p>
+                    </article>
+
+                    <article class="real-card">
+                        <img src="รูปภาพ2.png" alt="Basketball player entering the zone" class="real-image">
+                        <h3 class="real-head"><span class="real-icon">🏀</span><span class="real-head-text">ATHLETIC EXCELLENCE</span></h3>
+                        <p class="real-sub"><span class="real-zone">Engaging</span> play</p>
+                        <p class="real-body">นักบาสเข้าภาวะ <span class="real-zone">"The Zone"</span> เกมช้าลง แต่ความแม่นยำสูงขึ้น</p>
+                    </article>
+
+                    <article class="real-card">
+                        <img src="รูปภาพ3.png" alt="Runner in deep motion" class="real-image">
+                        <h3 class="real-head"><span class="real-icon">🏃</span><span class="real-head-text">JOYFUL RUNNER</span></h3>
+                        <p class="real-sub">Freedom in <span class="real-calm">motion</span></p>
+                        <p class="real-body"><span class="real-calm">Runner's High</span> ขณะวิ่ง ร่างกายตอบสนองอย่างลื่นไหล ไม่เหนื่อย ไม่เจ็บไม่ปวดขา</p>
+                    </article>
+                </div>
+
+                <p class="real-quote">"การทำงานใน <span class="real-quote-highlight">FLOW</span> ช่วยเพิ่ม <span class="real-quote-productivity">PRODUCTIVITY</span> สูงสุด <span class="real-quote-number">2-5 เท่า</span>"</p>
+            </div>
+        </section>
+
+        <section class="slide flow-action-slide">
+            <div class="slide-bg"
+                style="background-image: url('2014-02-13_KaitlynFarrington_EN-US7028193529_1920x1080.jpg'); opacity: 0.14; filter: blur(2px);">
+            </div>
+            <div class="slide-overlay"></div>
+
+            <div class="glass-panel">
+                <div class="action-layout">
+                    <div class="action-side">
+                        <h2 class="action-title">Flow in<br>Action</h2>
+                        <div class="action-divider" aria-hidden="true"></div>
+                        <div class="action-video-stack">
+                            <div class="action-video-panel is-shown" data-role="primary-video">
+                                <div class="action-video-wrap">
+                                    <iframe class="action-video"
+                                        data-src="https://www.youtube.com/embed/0F7ERlafQtc?autoplay=0&mute=0&controls=1"
+                                        title="Flow in Action Shorts 1"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+
+                            <button type="button" class="action-expand-toggle" aria-expanded="false" aria-label="Expand video">▾</button>
+
+                            <div class="action-video-panel is-hidden" data-role="secondary-video">
+                                <div class="action-video-wrap">
+                                    <iframe class="action-video"
+                                        data-src="https://www.youtube.com/embed/7uOk7LrFhjE?autoplay=0&mute=0&controls=1"
+                                        title="Flow in Action Shorts 2"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-grid">
+                        <article class="action-card">
+                            <img src="รูปภาพ6.png" alt="Guitarist playing in rhythm" class="action-image">
+                            <h3 class="action-head">GUITARIST IN RHYTHM</h3>
+                            <p class="action-text">นักดนตรีที่นิ้วไหลไปเองตามจังหวะ</p>
+                        </article>
+
+                        <article class="action-card">
+                            <img src="รูปภาพ7.png" alt="DJ in deep focus" class="action-image">
+                            <h3 class="action-head">DJ IN FOCUS</h3>
+                            <p class="action-text">ดีเจที่รู้สึกเชื่อมกับจังหวะเพลงจนไม่ต้องคิด</p>
+                        </article>
+
+                        <article class="action-card">
+                            <img src="รูปภาพ8.png" alt="Chef working in flow" class="action-image">
+                            <h3 class="action-head">CHEF AT WORK</h3>
+                            <p class="action-text">เชฟที่ทำอาหารแบบลื่นไหลทั้งรสชาติและการจัดจาน</p>
+                        </article>
+
+                        <article class="action-card">
+                            <img src="รูปภาพ10.png" alt="Coder in deep flow" class="action-image">
+                            <h3 class="action-head">CODER IN FLOW</h3>
+                            <p class="action-text">โปรแกรมเมอร์ที่เข้าภาวะ Deep Work จนแก้ปัญหาได้รวดเร็ว</p>
+                        </article>
+
+                        <article class="action-card">
+                            <img src="รูปภาพ9.png" alt="Athlete moving in the zone" class="action-image">
+                            <h3 class="action-head">ATHLETE IN MOTION</h3>
+                            <p class="action-text">Experiencing "the zone" ความรู้สึกที่เห็นทุกอย่างช้าลง เล่นแล้วทำได้ดี</p>
+                        </article>
+
+                        <article class="action-card">
+                            <img src="Gemini_Generated_Image_teh4gxteh4gxteh4.png" alt="Lego builder in harmony" class="action-image">
+                            <h3 class="action-head">LEGO BUILDER</h3>
+                            <p class="action-text">นักต่อเลโก้ที่หลอมรวมจินตนาการเข้ากับสมาธิอย่างสมบูรณ์แบบ จนโลกภายนอกหายไป เหลือเพียงความสุขในการสร้างสรรค์</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="slide flow-image-slide">
             <div class="slide-bg"
                 style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');">
@@ -946,7 +1716,79 @@
             <div class="slide-overlay"></div>
 
             <div class="glass-panel">
-                <img src="unnamed (1).jpg" alt="Flow science visual" class="flow-full-image">
+                <img src="unnamed (1).jpg" alt="Flow science visual" class="flow-full-image" id="flow-toggle-image" data-primary-src="unnamed (1).jpg" data-secondary-src="Gemini_Generated_Image_sy1j6lsy1j6lsy1j.png">
+            </div>
+        </section>
+
+        <section class="slide flow-cocktail-slide">
+            <div class="slide-bg"
+                style="background-image: url('Gemini_Generated_Image_sy1j6lsy1j6lsy1j.png'); opacity: 0.16; filter: blur(1.8px);">
+            </div>
+            <div class="slide-overlay"></div>
+
+            <div class="glass-panel">
+                <h2 class="cocktail-title">Decode The Flow Cocktail</h2>
+                <p class="cocktail-sub">เฉลย 5 สารเคมีสำคัญที่ขับเคลื่อนภาวะ Flow พร้อมปัจจัยที่ช่วยกระตุ้นแต่ละตัว</p>
+
+                <div class="cocktail-scroll">
+                    <div class="cocktail-grid">
+                        <article class="cocktail-card">
+                            <h3 class="cocktail-head">1) <span class="cocktail-main">DOPAMINE</span> <span class="thai">(โดพามีน)</span></h3>
+                            <p class="cocktail-what">สารแห่ง<span class="key-msg">ความพึงพอใจและการจดจ่อ</span> (Satisfaction &amp; Focus) ช่วยขยายโฟกัส เพิ่มแรงจูงใจ และทำให้เราอยากทำต่อจนสำเร็จ</p>
+                            <ul class="cocktail-list">
+                                <li><strong>Challenge-Skills Balance:</strong> ยากขึ้นกว่าทักษะเล็กน้อย (<span class="key-msg">ประมาณ 4%</span>)</li>
+                                <li><strong>Clear Goals:</strong> เป้าหมายชัดในทันที</li>
+                                <li><strong>Immediate Feedback:</strong> รู้ผลลัพธ์ทันทีเพื่อคงสมาธิ</li>
+                                <li><strong>Novelty &amp; Complexity:</strong> สิ่งใหม่และโจทย์ซับซ้อนกระตุ้นความอยากรู้</li>
+                                <li><strong>Pattern Recognition:</strong> ช่วงเวลา <span class="key-msg">"ยูเรก้า"</span> เมื่อเชื่อมโยงไอเดียได้</li>
+                            </ul>
+                        </article>
+
+                        <article class="cocktail-card">
+                            <h3 class="cocktail-head">2) <span class="cocktail-main">NOREPINEPHRINE</span> <span class="thai">(นอร์เอพิเนฟริน)</span></h3>
+                            <p class="cocktail-what">สารแห่ง<span class="key-msg">ความตื่นตัวและพลังงาน</span> (Alertness &amp; Energy) ช่วยเตรียมร่างกายและเร่งความเร็วในการประมวลผลของสมอง</p>
+                            <ul class="cocktail-list">
+                                <li><strong>Risk &amp; Urgency:</strong> สถานการณ์เดิมพันสูงหรือใกล้<span class="key-msg">เส้นตาย</span></li>
+                                <li><strong>Competition:</strong> การแข่งขันหรือการต่อสู้กับผู้อื่น</li>
+                                <li><strong>High-Intensity Exercise:</strong> ออกกำลังกายเข้มข้นจนหัวใจเต้นแรง</li>
+                                <li><strong>Cold Exposure:</strong> กระตุ้นผ่านความเย็นจัด เช่น อาบน้ำเย็น</li>
+                            </ul>
+                        </article>
+
+                        <article class="cocktail-card">
+                            <h3 class="cocktail-head">3) <span class="cocktail-main">ENDORPHINS</span> <span class="thai">(เอนดอร์ฟิน)</span></h3>
+                            <p class="cocktail-what">สาร<span class="key-msg">ระงับปวดตามธรรมชาติ</span> (Natural Pain Relief) ช่วยบรรเทาความล้า ทำให้ออกแรงหรือลุยงานได้นานขึ้นโดยไม่รู้สึกเจ็บปวดมาก</p>
+                            <ul class="cocktail-list">
+                                <li><strong>Endurance Exercise:</strong> วิ่ง ว่ายน้ำ ปั่นจักรยาน จนเกิด <span class="key-msg">Runner's High</span></li>
+                                <li><strong>Pushing Physical Limits:</strong> กิจกรรมที่ข้ามขีดจำกัดทางกายเล็กน้อย</li>
+                                <li><strong>Laughter &amp; Social Bonding:</strong> หัวเราะและเชื่อมสัมพันธ์กับผู้อื่น</li>
+                                <li><strong>Eating Spicy Food:</strong> สมองหลั่งเอนดอร์ฟินเพื่อลดความเผ็ด</li>
+                            </ul>
+                        </article>
+
+                        <article class="cocktail-card">
+                            <h3 class="cocktail-head">4) <span class="cocktail-main">ANANDAMIDE</span> <span class="thai">(อนันดาไมด์)</span></h3>
+                            <p class="cocktail-what">สารแห่ง<span class="key-msg">ความสุขสงบและความคิดสร้างสรรค์</span> (Bliss &amp; Creativity) ช่วยลดความกลัว ความกังวล และเร่งการเชื่อมโยงไอเดียแบบนอกกรอบ</p>
+                            <ul class="cocktail-list">
+                                <li><strong>Moderate Aerobic Exercise:</strong> แอร์โรบิกระดับปานกลางต่อเนื่อง</li>
+                                <li><strong>Creative Lateral Thinking:</strong> Brainstorming และโจทย์คิดนอกกรอบ</li>
+                                <li><strong>Meditation:</strong> ฝึกจิตให้สงบเพื่อลดเสียงรบกวนภายใน</li>
+                                <li><strong>Dark Chocolate:</strong> มีสารที่ช่วยชะลอการย่อยสลายอนันดาไมด์</li>
+                            </ul>
+                        </article>
+
+                        <article class="cocktail-card">
+                            <h3 class="cocktail-head">5) <span class="cocktail-main">SEROTONIN</span> <span class="thai">(เซโรโทนิน)</span></h3>
+                            <p class="cocktail-what">สารแห่ง<span class="key-msg">ความสงบและพึงพอใจ</span> (Calmness &amp; Fulfillment) มักเด่นช่วงท้ายหรือหลังจบ Flow ช่วยให้รู้สึกเต็มอิ่มและฟื้นตัวดีขึ้น</p>
+                            <ul class="cocktail-list">
+                                <li><strong>Celebrating Small Wins:</strong> ฉลองชัยชนะเล็กๆ หลังทำสำเร็จ</li>
+                                <li><strong>Gratitude:</strong> ทบทวนและขอบคุณสิ่งดีๆ ที่เกิดขึ้น</li>
+                                <li><strong>Sunlight Exposure:</strong> รับแสงแดด โดยเฉพาะ<span class="key-msg">ช่วงเช้า</span></li>
+                                <li><strong>Quality Sleep:</strong> นอนคุณภาพเพื่อฟื้นฟูสมอง</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1224,19 +2066,7 @@
                 <div id="progress-points"></div>
                 <div id="progress-streak" aria-hidden="true"></div>
                 <div id="progress-ship" aria-hidden="true">
-                    <svg viewBox="0 0 64 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="airplane">
-                        <path fill="#d6dee9" d="M7 20h40c3.2 0 6.1 1.3 8.2 3.5H63a2.7 2.7 0 0 1 0 5.4H8.2A5.2 5.2 0 0 1 3 23.7V20h4z"/>
-                        <path fill="#e4ebf3" d="M3 11h6.5l5.2 6H3v-6z"/>
-                        <path fill="#c4cfdd" d="M22.5 11h8.1L39 20H26.7l-4.2-9z"/>
-                        <path fill="#c4cfdd" d="M22.5 29h6.9l-6.6 7h-3.4l3.1-7z"/>
-                        <rect x="17" y="22" width="1.8" height="1.8" fill="#0f172a"/>
-                        <rect x="20.6" y="22" width="1.8" height="1.8" fill="#0f172a"/>
-                        <rect x="24.2" y="22" width="1.8" height="1.8" fill="#0f172a"/>
-                        <rect x="27.8" y="22" width="1.8" height="1.8" fill="#0f172a"/>
-                        <rect x="44" y="22" width="2" height="2" fill="#0f172a"/>
-                        <rect x="47.6" y="22" width="2" height="2" fill="#0f172a"/>
-                        <path fill="#b4c0d0" d="M3 20h1.8v-3H3z"/>
-                    </svg>
+                    <img src="plane.png" alt="airplane">
                 </div>
             </div>
         </div>
@@ -1380,6 +2210,66 @@
             updateSlides();
         }
 
+        function initFlowActionVideoToggle() {
+            const toggleButton = document.querySelector('.flow-action-slide .action-expand-toggle');
+            const primaryPanel = document.querySelector('.flow-action-slide [data-role="primary-video"]');
+            const secondaryPanel = document.querySelector('.flow-action-slide [data-role="secondary-video"]');
+
+            if (!toggleButton || !primaryPanel || !secondaryPanel) {
+                return;
+            }
+
+            let isSecondaryExpanded = false;
+
+            toggleButton.addEventListener('click', () => {
+                isSecondaryExpanded = !isSecondaryExpanded;
+
+                primaryPanel.classList.toggle('is-hidden', isSecondaryExpanded);
+                primaryPanel.classList.toggle('is-shown', !isSecondaryExpanded);
+
+                secondaryPanel.classList.toggle('is-shown', isSecondaryExpanded);
+                secondaryPanel.classList.toggle('is-hidden', !isSecondaryExpanded);
+
+                toggleButton.setAttribute('aria-expanded', String(isSecondaryExpanded));
+                toggleButton.setAttribute('aria-label', isSecondaryExpanded ? 'Collapse video' : 'Expand video');
+                toggleButton.textContent = isSecondaryExpanded ? '▴' : '▾';
+            });
+        }
+
+        function initFlowImageToggle() {
+            const flowImage = document.getElementById('flow-toggle-image');
+            if (!flowImage) {
+                return;
+            }
+
+            const primarySrc = flowImage.dataset.primarySrc;
+            const secondarySrc = flowImage.dataset.secondarySrc;
+            let isShowingSecondary = false;
+            let isAnimating = false;
+
+            flowImage.addEventListener('click', () => {
+                if (isAnimating || !primarySrc || !secondarySrc) {
+                    return;
+                }
+
+                isAnimating = true;
+                flowImage.classList.add('is-fading');
+
+                setTimeout(() => {
+                    isShowingSecondary = !isShowingSecondary;
+                    flowImage.src = isShowingSecondary ? secondarySrc : primarySrc;
+
+                    requestAnimationFrame(() => {
+                        flowImage.classList.remove('is-fading');
+                    });
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 320);
+                }, 170);
+            });
+        }
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight') {
                 changeSlide(1);
@@ -1389,6 +2279,8 @@
         });
 
         // Initialize slide
+        initFlowActionVideoToggle();
+        initFlowImageToggle();
         buildProgressPoints();
         updateSlides();
         requestAnimationFrame(animateProgressShip);
