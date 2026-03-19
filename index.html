@@ -145,6 +145,38 @@
             animation: flowStateGlowBreath 4.8s ease-in-out infinite;
         }
 
+        .slide h1,
+        .slide h2 {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        :root {
+            --slide-title-size: clamp(2.35rem, 5vw, 4.2rem);
+            --slide-title-weight: 700;
+            --slide-title-line-height: 1.1;
+        }
+
+        .slide:not(:first-child) .glass-panel > h1,
+        .slide:not(:first-child) .glass-panel > h2,
+        .flow-action-slide .action-title,
+        .real-life-flow-slide .real-title,
+        .flow-cocktail-slide .cocktail-title,
+        .conditions-flow-slide .conditions-title {
+            font-size: var(--slide-title-size) !important;
+            font-weight: var(--slide-title-weight) !important;
+            line-height: var(--slide-title-line-height) !important;
+        }
+
+        .title-key {
+            color: #fbbf24;
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+        }
+
+        .title-key-cyan {
+            color: #7dd3fc;
+            text-shadow: 0 0 10px rgba(125, 211, 252, 0.28);
+        }
+
         @keyframes flowStateGlowBreath {
             0%, 100% {
                 -webkit-text-stroke-color: rgba(251, 191, 36, 0.52);
@@ -170,8 +202,28 @@
         }
 
         .forget-time-slide .bullet-item {
-            font-size: 1.45rem;
-            line-height: 2.1rem;
+            font-size: 1.24rem;
+            line-height: 1.75rem;
+            font-weight: 300;
+            color: #dbe4f2;
+        }
+
+        .forget-time-slide .bullet-item strong {
+            font-weight: 600;
+        }
+
+        .forget-time-slide .hello-world-id-card {
+            padding-top: 0.95rem;
+            padding-bottom: 0.95rem;
+        }
+
+        .forget-time-slide .hello-world-id-card .hello-world-id-title {
+            margin-bottom: 0.62rem;
+            padding-bottom: 0.38rem;
+        }
+
+        .forget-time-slide .hello-world-id-card .hello-world-id-grid {
+            row-gap: 0.3rem;
         }
 
         .forget-time-slide .glass-panel {
@@ -352,6 +404,8 @@
 
         .what-is-flow-slide .glass-panel {
             max-width: 1320px;
+            transform: scale(1);
+            transform-origin: center center;
         }
 
         .what-is-flow-slide .video-sequence {
@@ -888,6 +942,230 @@
             text-shadow: 0 0 9px rgba(252, 211, 77, 0.22);
         }
 
+        .conditions-flow-slide .glass-panel {
+            max-width: 1400px;
+            min-height: min(82vh, 760px);
+            background: rgba(15, 29, 51, 0.56);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 1.4rem;
+            padding: 2.2rem 2.3rem 1.8rem;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 1.1rem;
+        }
+
+        .conditions-flow-slide .conditions-title {
+            margin: 0;
+            font-size: clamp(2.2rem, 5.2vw, 4rem);
+            line-height: 1.1;
+            font-weight: 500;
+            color: #dbeafe;
+            letter-spacing: 0.01em;
+            width: 100%;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.9);
+        }
+
+        .conditions-flow-slide .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.35rem 1.95rem;
+            align-content: center;
+            padding-top: 0.5rem;
+        }
+
+        .conditions-flow-slide .condition-item {
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            border-left: 5px solid rgba(125, 211, 252, 0.85);
+            border-radius: 0.35rem;
+            padding: 1.05rem 1.15rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.58rem;
+            min-height: 165px;
+            box-shadow: 0 12px 24px rgba(2, 6, 23, 0.38);
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+        }
+
+        .conditions-flow-slide .condition-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 30px rgba(2, 6, 23, 0.48);
+        }
+
+        .conditions-flow-slide .condition-head {
+            margin: 0;
+            color: #bfdbfe;
+            font-size: clamp(1.14rem, 1.95vw, 2rem);
+            line-height: 1.3;
+            font-weight: 700;
+            letter-spacing: 0.015em;
+            display: flex;
+            align-items: center;
+            gap: 0.62rem;
+        }
+
+        .conditions-flow-slide .condition-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 9999px;
+            background: rgba(245, 158, 11, 0.18);
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.4);
+            color: #fbbf24;
+            font-size: 1rem;
+            line-height: 1;
+            flex-shrink: 0;
+            transform: translateY(1px);
+        }
+
+        .conditions-flow-slide .condition-head-text {
+            text-transform: uppercase;
+        }
+
+        .conditions-flow-slide .condition-text {
+            margin: 0;
+            color: #dbeafe;
+            font-size: clamp(0.96rem, 1.35vw, 1.36rem);
+            line-height: 1.65;
+        }
+
+        .conditions-flow-slide .condition-key {
+            color: #fcd34d;
+            font-weight: 700;
+            text-shadow: 0 0 8px rgba(252, 211, 77, 0.2);
+        }
+
+        .conditions-flow-slide .condition-key-cyan {
+            color: #7dd3fc;
+            font-weight: 700;
+        }
+
+        .conditions-flow-slide .condition-key-orange {
+            color: #fb923c;
+            font-weight: 700;
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(1) {
+            border-left-color: #f59e0b;
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.86), rgba(15, 23, 42, 0.76));
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(1) .condition-icon {
+            background: rgba(245, 158, 11, 0.2);
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.45);
+            color: #fbbf24;
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(2) {
+            border-left-color: #22d3ee;
+            background: linear-gradient(180deg, rgba(12, 74, 110, 0.45), rgba(15, 23, 42, 0.78));
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(2) .condition-icon {
+            background: rgba(34, 211, 238, 0.2);
+            box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.45);
+            color: #67e8f9;
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(3) {
+            border-left-color: #4ade80;
+            background: linear-gradient(180deg, rgba(21, 128, 61, 0.3), rgba(15, 23, 42, 0.78));
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(3) .condition-icon {
+            background: rgba(74, 222, 128, 0.2);
+            box-shadow: 0 0 0 1px rgba(74, 222, 128, 0.4);
+            color: #86efac;
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(4) {
+            border-left-color: #a78bfa;
+            background: linear-gradient(180deg, rgba(76, 29, 149, 0.32), rgba(15, 23, 42, 0.78));
+        }
+
+        .conditions-flow-slide .condition-item:nth-child(4) .condition-icon {
+            background: rgba(167, 139, 250, 0.2);
+            box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.45);
+            color: #c4b5fd;
+        }
+
+        .conditions-flow-slide .conditions-footer {
+            margin: 0;
+            text-align: center;
+            color: #f8fafc;
+            font-size: clamp(1.18rem, 2.2vw, 2rem);
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .conditions-flow-slide .conditions-footer-highlight {
+            color: #dbeafe;
+            text-decoration: underline;
+            text-decoration-color: rgba(226, 232, 240, 0.9);
+            text-underline-offset: 0.2em;
+            text-decoration-thickness: 2px;
+        }
+
+        .conditions-flow-slide .conditions-footer-percent {
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .quick-flow-slide .quick-key {
+            color: #fcd34d;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 0.18em;
+            text-decoration-color: rgba(252, 211, 77, 0.8);
+        }
+
+        .quick-flow-slide .glass-panel {
+            max-width: 1400px;
+            min-height: min(82vh, 760px);
+            background: rgba(15, 29, 51, 0.56);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 1.4rem;
+            padding: 2.2rem 2.3rem 1.8rem;
+        }
+
+        .quick-flow-slide .quick-cards-grid {
+            gap: 1.1rem;
+        }
+
+        .quick-flow-slide .quick-card {
+            padding: 1.1rem;
+        }
+
+        .quick-flow-slide .quick-card h3 {
+            font-family: 'Prompt', sans-serif;
+            font-size: clamp(1.14rem, 1.95vw, 2rem);
+            line-height: 1.3;
+            font-weight: 700;
+            letter-spacing: 0.015em;
+        }
+
+        .quick-flow-slide .quick-card p {
+            font-family: 'Prompt', sans-serif;
+            font-size: clamp(0.96rem, 1.35vw, 1.36rem);
+            line-height: 1.65;
+        }
+
+        .quick-flow-slide .quick-image {
+            height: auto !important;
+            object-fit: contain;
+            width: auto;
+            max-width: 100%;
+            max-height: 380px;
+            display: block;
+        }
+
+        .quick-flow-slide .quick-tip {
+            font-family: 'Prompt', sans-serif;
+        }
+
         @media (min-width: 1024px) {
             .what-is-flow-slide .content-layout {
                 display: grid;
@@ -1002,6 +1280,32 @@
             .flow-cocktail-slide .cocktail-scroll {
                 max-height: calc(100vh - 14rem);
             }
+
+            .conditions-flow-slide .glass-panel {
+                min-height: auto;
+                padding: 1.35rem 1rem 1.1rem;
+                gap: 0.9rem;
+            }
+
+            .conditions-flow-slide .conditions-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+                padding-top: 0.3rem;
+            }
+
+            .conditions-flow-slide .condition-item {
+                min-height: auto;
+                padding: 0.95rem 0.9rem;
+            }
+
+            .conditions-flow-slide .condition-head {
+                text-transform: none;
+            }
+
+            .conditions-flow-slide .condition-head-text {
+                text-transform: none;
+            }
+
         }
 
         @keyframes flowImageBreathingGlow {
@@ -1039,8 +1343,8 @@
 
         @media (max-width: 768px) {
             .forget-time-slide .bullet-item {
-                font-size: 1.25rem;
-                line-height: 1.85rem;
+                font-size: 1.02rem;
+                line-height: 1.58rem;
             }
         }
 
@@ -1289,7 +1593,7 @@
                         State</span>
                 </h1>
                 <h2 class="text-2xl md:text-3xl text-slate-300 mb-12 font-light">
-                    สภาวะลื่นไหล... ที่ดึงศักยภาพสูงสุดของคุณออกมา
+                    สภาวะ<span class="title-key-cyan">ลื่นไหล</span>... ที่ดึงศักยภาพสูงสุดของคุณออกมา
                 </h2>
 
                 <div class="mt-8 mb-12 flex justify-center">
@@ -1395,12 +1699,12 @@
                             </p>
 
                             <div
-                                class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 text-left backdrop-blur-sm transition hover:bg-slate-800/60">
+                                class="hello-world-id-card bg-slate-800/40 border border-slate-700/50 rounded-xl p-4 text-left backdrop-blur-sm transition hover:bg-slate-800/60">
                                 <p
-                                    class="text-xs font-semibold text-slate-400 uppercase tracking-wider text-center mb-3 pb-2 border-b border-slate-700/50">
+                                    class="hello-world-id-title text-xs font-semibold text-slate-400 uppercase tracking-wider text-center mb-3 pb-2 border-b border-slate-700/50">
                                     T.C.C Technology Co.,Ltd.
                                 </p>
-                                <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-xs md:text-sm">
+                                <div class="hello-world-id-grid grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-xs md:text-sm">
                                     <span class="text-slate-500 text-right">Name:</span>
                                     <span class="text-slate-300 font-medium">Mr. Hussadee Jaiaue</span>
 
@@ -1451,7 +1755,7 @@
                             <span class="bullet-icon">🎯</span>
                             <span>เหลือเพียงแค่ <strong class="quoted-text">"คุณ"</strong> กับ <strong class="quoted-text">"สิ่งที่อยู่ตรงหน้า"</strong></span>
                         </div>
-                        <div class="mt-8 p-4 bg-sky-900/30 rounded-lg border border-sky-500/20 text-center">
+                        <div class="mt-8 mx-auto w-fit max-w-full px-4 py-2 bg-sky-900/30 rounded-lg border border-sky-500/20 text-center">
                             <p class="text-2xl font-semibold text-orange-400 italic">"สภาวะนี้เรียกว่าอะไร?"</p>
                         </div>
                     </div>
@@ -1601,7 +1905,7 @@
             <div class="slide-overlay"></div>
 
             <div class="glass-panel">
-                <h2 class="real-title">Real-Life Flow</h2>
+                <h2 class="real-title">Real-Life <span class="title-key">Flow</span></h2>
 
                 <div class="real-grid">
                     <article class="real-card">
@@ -1639,7 +1943,7 @@
             <div class="glass-panel">
                 <div class="action-layout">
                     <div class="action-side">
-                        <h2 class="action-title">Flow in<br>Action</h2>
+                        <h2 class="action-title"><span class="title-key">Flow</span> in<br>Action</h2>
                         <div class="action-divider" aria-hidden="true"></div>
                         <div class="action-video-stack">
                             <div class="action-video-panel is-shown" data-role="primary-video">
@@ -1722,12 +2026,12 @@
 
         <section class="slide flow-cocktail-slide">
             <div class="slide-bg"
-                style="background-image: url('Gemini_Generated_Image_sy1j6lsy1j6lsy1j.png'); opacity: 0.16; filter: blur(1.8px);">
+                style="background-image: url('b391.webp'); opacity: 0.16; filter: blur(1.8px);">
             </div>
             <div class="slide-overlay"></div>
 
             <div class="glass-panel">
-                <h2 class="cocktail-title">Decode The Flow Cocktail</h2>
+                <h2 class="cocktail-title">Decode The <span class="title-key">Flow</span> Cocktail</h2>
                 <p class="cocktail-sub">เฉลย 5 สารเคมีสำคัญที่ขับเคลื่อนภาวะ Flow พร้อมปัจจัยที่ช่วยกระตุ้นแต่ละตัว</p>
 
                 <div class="cocktail-scroll">
@@ -1800,7 +2104,7 @@
 
             <div class="glass-panel">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white border-b border-slate-700 pb-4">
-                    The Flow <span class="highlight">Equation</span>
+                    The <span class="title-key">Flow</span> <span class="highlight">Equation</span>
                 </h2>
 
                 <div class="equation-layout">
@@ -1829,6 +2133,91 @@
 
                 <div class="equation-footer">
                     สำรวจงานของคุณ: ตอนนี้ <strong class="equation-key-hard">ท้าทายเกินไป</strong> หรือ <strong class="equation-key-easy">ง่ายเกินไป</strong>?
+                </div>
+            </div>
+        </section>
+
+        <section class="slide conditions-flow-slide">
+            <div class="slide-bg"
+                style="background-image: url('2014-01-16_EN-AU8194697084_Marmora-Mines-near-Marmora-Ontario-Canada_1920x1080.jpg'); opacity: 0.14; filter: blur(3px);">
+            </div>
+            <div class="slide-overlay"></div>
+
+            <div class="glass-panel">
+                <h2 class="conditions-title">Conditions for <span class="title-key">Flow</span></h2>
+
+                <div class="conditions-grid">
+                    <article class="condition-item">
+                        <h3 class="condition-head"><span class="condition-icon">🎯</span><span class="condition-head-text">CLEAR GOAL - เป้าหมายชัดเจน</span></h3>
+                        <p class="condition-text">เมื่อรู้ว่ากำลังทำ <span class="condition-key">"อะไร"</span> สมองจะ <span class="condition-key-orange">โฟกัสทันที</span></p>
+                    </article>
+
+                    <article class="condition-item">
+                        <h3 class="condition-head"><span class="condition-icon">⚖</span><span class="condition-head-text">CHALLENGE-SKILL BALANCE - ระดับท้าทายพอดี</span></h3>
+                        <p class="condition-text">งานต้อง<span class="condition-key">ไม่ง่ายเกินไป</span> และ<span class="condition-key">ไม่ยากเกินไป</span> Flow เกิดตรงกลาง: <span class="condition-key-cyan">ระดับความท้าทายเพิ่มขึ้นอย่างพอดี</span></p>
+                    </article>
+
+                    <article class="condition-item">
+                        <h3 class="condition-head"><span class="condition-icon">⚡</span><span class="condition-head-text">IMMEDIATE FEEDBACK - ได้รับผลทันที</span></h3>
+                        <p class="condition-text">เห็นผลทันทีว่าสิ่งที่ทำ<span class="condition-key-orange">ดี</span>/<span class="condition-key-orange">พลาด</span>ตรงไหน</p>
+                    </article>
+
+                    <article class="condition-item">
+                        <h3 class="condition-head"><span class="condition-icon">🎧</span><span class="condition-head-text">DEEP FOCUS - ไม่มีสิ่งรบกวน</span></h3>
+                        <p class="condition-text">การมีสมาธิจดจ่ออย่างลึกซึ้งต้องลด <span class="condition-key">สิ่งรบกวน</span> ให้เหลือน้อยที่สุด เพื่อให้ทุกคนสามารถ <span class="condition-key-cyan">ดื่มด่ำกับงานได้อย่างเต็มที่</span></p>
+                    </article>
+                </div>
+
+                <p class="conditions-footer">"FLOW <span class="conditions-footer-highlight">เกิดดีที่สุดเมื่อความท้าทายมากกว่าทักษะประมาณ</span> <span class="conditions-footer-percent">4%</span>"</p>
+            </div>
+        </section>
+
+        <section class="slide quick-flow-slide">
+            <div class="slide-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1920&q=80'); opacity: 0.1; filter: blur(2px);">
+            </div>
+            <div class="slide-overlay"></div>
+
+            <div class="glass-panel">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white border-b border-slate-700 pb-4">
+                    Quick <span class="title-key">Flow</span> Triggers
+                </h2>
+
+                <div class="content-layout layout-reverse">
+                    <div class="quick-cards-grid flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
+                            <h3 class="text-lg font-bold text-orange-400 mb-1">Silence Distractions</h3>
+                            <p class="text-slate-300 text-sm">ปิดการแจ้งเตือนเพื่อสร้างสภาพแวดล้อมที่มีสมาธิและสงบมากขึ้น</p>
+                        </div>
+                        <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
+                            <h3 class="text-lg font-bold text-orange-400 mb-1">Set Intention</h3>
+                            <p class="text-slate-300 text-sm">กำหนดเจตนาที่ชัดเจนเพียงหนึ่งเดียวเพื่อชี้นำการกระทำของคุณให้บรรลุผลสำเร็จ</p>
+                        </div>
+                        <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
+                            <h3 class="text-lg font-bold text-orange-400 mb-1">Deep Breaths</h3>
+                            <p class="text-slate-300 text-sm">4-4-8 <span class="quick-key">เพื่อให้จิตใจสงบและผ่อนคลายก่อนสิ่งที่จะเริ่มทำ</span></p>
+                        </div>
+                        <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
+                            <h3 class="text-lg font-bold text-orange-400 mb-1">Set Time Block</h3>
+                            <p class="text-slate-300 text-sm">ตั้งเวลางานที่จะทำ อย่างน้อย 1-2 ชั่วโมงโดยไม่ถูกรบกวน</p>
+                        </div>
+                        <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
+                            <h3 class="text-lg font-bold text-orange-400 mb-1">Observe Flow</h3>
+                            <p class="text-slate-300 text-sm">ฝึกสติอยู่กับปัจจุบัน การทำสมาธิ การฝึก Focus หรือ ใส่ใจสิ่งเล็กๆ รอบๆตัว</p>
+                        </div>
+                        <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
+                            <h3 class="text-lg font-bold text-orange-400 mb-1">Reduce Switching</h3>
+                            <p class="text-slate-300 text-sm">เทคนิค Single-tasking ไม่ทำหลายอย่างพร้อมกันเพื่อเพิ่มสมาธิและรักษาสมาธิในการทำงานให้ลึกยิ่งขึ้น</p>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 w-full flex flex-col items-center">
+                        <img src="brain-workout.webp"
+                            alt="Focused mind and flow routine" class="slide-image quick-image mb-4">
+                        <div class="speaker-note quick-tip w-full mt-0">
+                            <strong>🎯 Tip:</strong> เลือกใช้ Quick Trigger เพียง 1-2 ข้อก่อนเริ่มงาน แล้วทำซ้ำทุกวันจนกลายเป็นพิธีกรรมก่อนเข้า Flow
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1919,54 +2308,13 @@
 
         <section class="slide">
             <div class="slide-bg"
-                style="background-image: url('https://storage.googleapis.com/mv-prod-blog-en-assets/2025/02/b519873d-deep-meditation-mindvalley-blog-02-midjourney-seo-team.webp'); opacity: 0.25;">
-            </div>
-            <div class="slide-overlay"></div>
-
-            <div class="glass-panel">
-                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white border-b border-slate-700 pb-4">
-                    4 เทคนิคสั่งสมองเข้าสู่ <span class="highlight">Flow</span>
-                </h2>
-                <div class="content-layout layout-reverse">
-                    <div class="flex-1 grid grid-cols-1 gap-4">
-                        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-600">
-                            <h3 class="text-lg font-bold text-orange-400 mb-1">1. Set Time Block ⏱️</h3>
-                            <p class="text-slate-300 text-sm">ล็อกเวลา 1-2 ชั่วโมงโดยไม่ถูกรบกวน</p>
-                        </div>
-                        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-600">
-                            <h3 class="text-lg font-bold text-orange-400 mb-1">2. Silence Distractions 🔕</h3>
-                            <p class="text-slate-300 text-sm">ปิดการแจ้งเตือนและเครื่องมือสื่อสารทั้งหมด</p>
-                        </div>
-                        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-600">
-                            <h3 class="text-lg font-bold text-orange-400 mb-1">3. Deep Breaths 🧘‍♂️</h3>
-                            <p class="text-slate-300 text-sm">หายใจแบบ 4-4-8 ปรับคลื่นสมอง (อานาปานสติ)</p>
-                        </div>
-                        <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-600">
-                            <h3 class="text-lg font-bold text-orange-400 mb-1">4. Single-tasking 🎯</h3>
-                            <p class="text-slate-300 text-sm">โฟกัสเป้าหมายเดียวอย่างแน่วแน่</p>
-                        </div>
-                    </div>
-                    <div class="flex-1 w-full flex flex-col items-center">
-                        <img src="https://storage.googleapis.com/mv-prod-blog-en-assets/2025/02/b519873d-deep-meditation-mindvalley-blog-02-midjourney-seo-team.webp"
-                            alt="Person meditating" class="slide-image mb-4 h-48">
-                        <div class="speaker-note w-full mt-0">
-                            <strong>🎵 Tip:</strong> ฟังคลื่นเสียง <em>Binaural Beats (Theta/Alpha)</em> เช่น 432Hz
-                            คลอเบาๆ ช่วยพาสมองเข้าสู่ความถี่ที่ถูกต้องได้รวดเร็วยิ่งขึ้น
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="slide">
-            <div class="slide-bg"
                 style="background-image: url('https://storage.googleapis.com/mv-prod-blog-en-assets/2025/02/b519873d-deep-meditation-mindvalley-blog-02-midjourney-seo-team.webp'); opacity: 0.2;">
             </div>
             <div class="slide-overlay"></div>
 
             <div class="glass-panel">
                 <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white border-b border-slate-700 pb-4">
-                    Debrief — ถอดบทเรียนจากเลโก้
+                    <span class="title-key-cyan">Debrief</span> — ถอดบทเรียนจากเลโก้
                 </h2>
                 <div class="content-layout layout-stack">
                     <div class="flex-1 space-y-6">
@@ -2001,7 +2349,7 @@
             <div class="slide-overlay"></div>
 
             <div class="glass-panel text-center">
-                <h2 class="text-5xl font-bold mb-8 text-white">KAHOOT!</h2>
+                <h2 class="text-5xl font-bold mb-8 text-white"><span class="title-key">KAHOOT!</span></h2>
                 <p class="text-2xl text-slate-200 mb-6">ตอบคำถามชิงรางวัลพิเศษ</p>
                 <div
                     class="inline-block px-6 py-4 bg-gradient-to-r from-amber-400 to-orange-500 rounded-2xl shadow-[0_0_20px_rgba(251,191,36,0.35)] text-white text-xl font-semibold">
@@ -2018,7 +2366,7 @@
 
             <div class="glass-panel text-center">
                 <h2 class="text-5xl font-bold mb-10 text-white pb-4">
-                    สรุป <span class="text-slate-400">(Conclusion)</span>
+                    <span class="title-key">สรุป</span> <span class="text-slate-400">(Conclusion)</span>
                 </h2>
 
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
