@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speaker Notes — Flow State Training</title>
+    <title>Speaker Notes - Unlocking Flow State</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --accent: #fb923c;
+            --accent-soft: rgba(251, 146, 60, 0.2);
+            --panel: rgba(15, 23, 42, 0.74);
+            --text-main: #e2e8f0;
         }
 
         * {
@@ -16,42 +19,51 @@
         }
 
         body {
-            font-family: 'Prompt', sans-serif;
-            background: #050b14;
-            color: #e2e8f0;
             margin: 0;
-            line-height: 1.75;
+            font-family: 'Prompt', sans-serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background:
+                radial-gradient(circle at 10% 10%, rgba(14, 116, 144, 0.25), transparent 35%),
+                radial-gradient(circle at 85% 20%, rgba(251, 146, 60, 0.18), transparent 30%),
+                #020617;
         }
 
         .glass {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: var(--panel);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .chip {
+            border: 1px solid rgba(251, 146, 60, 0.45);
+            background: var(--accent-soft);
+            color: #fdba74;
+        }
+
+        .agenda-list li,
+        .script-block {
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            background: rgba(15, 23, 42, 0.52);
+            border-radius: 0.9rem;
         }
 
         .agenda-list li {
-            padding: 0.65rem 0.8rem;
-            border-radius: 0.75rem;
-            background: rgba(30, 41, 59, 0.45);
-            border: 1px solid rgba(148, 163, 184, 0.15);
-            line-height: 1.7;
+            padding: 0.7rem 0.9rem;
         }
 
-        .script-list > div {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 0.85rem;
-            padding: 0.95rem 1rem;
+        .script-block {
+            padding: 1rem 1rem;
         }
 
-        .script-list p,
-        .script-list li {
-            color: #e2e8f0;
+        .script-block h3 {
+            margin: 0;
+        }
+
+        .script-block p,
+        .script-block li {
             font-size: 1.02rem;
-            line-height: 1.9;
-        }
-
-        .script-list ul {
-            margin-top: 0.5rem;
+            color: #e2e8f0;
         }
 
         .key {
@@ -59,123 +71,287 @@
             font-weight: 600;
         }
 
+        .line {
+            border-left: 4px solid #fb923c;
+            padding-left: 0.9rem;
+        }
+
+        .cue {
+            border-left: 4px solid #38bdf8;
+            background: rgba(8, 47, 73, 0.42);
+            padding: 0.75rem 0.85rem;
+            border-radius: 0.7rem;
+            color: #bae6fd;
+        }
+
+        .mini {
+            color: #94a3b8;
+            font-size: 0.92rem;
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                color: #111827;
+            }
+
+            .glass,
+            .agenda-list li,
+            .script-block,
+            .cue {
+                background: #ffffff;
+                color: #111827;
+                border-color: #d1d5db;
+            }
+
+            .key {
+                color: #92400e;
+            }
+        }
+
         @media (max-width: 768px) {
             body {
-                line-height: 1.8;
+                line-height: 1.85;
             }
 
-            .script-list > div {
-                padding: 0.85rem 0.85rem;
-            }
-
-            .script-list p,
-            .script-list li,
+            .script-block p,
+            .script-block li,
             .agenda-list li {
-                font-size: 0.98rem;
+                font-size: 0.97rem;
             }
         }
     </style>
 </head>
 <body class="min-h-screen">
-    <main class="max-w-5xl mx-auto px-4 md:px-6 py-6 md:py-10">
+    <main class="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-10">
         <header class="mb-8">
-            <div class="inline-flex items-center gap-2 rounded-full bg-orange-500/15 px-4 py-1 text-sm text-orange-300 border border-orange-500/30">
-                Speaker Notes
+            <div class="inline-flex items-center gap-2 rounded-full px-4 py-1 text-sm chip">
+                Speaker Notes - Full Deck Script
             </div>
-            <h1 class="text-3xl md:text-5xl font-bold mt-4 leading-tight">Flow State Training — ผู้บรรยาย</h1>
-            <p class="text-slate-400 mt-2 text-sm md:text-base">ใช้หน้านี้สำหรับดูสคริปต์และโครงสร้างคลาสระหว่างบรรยาย</p>
+            <h1 class="text-3xl md:text-5xl font-bold mt-4 leading-tight text-white">Unlocking Flow State - คู่มือผู้บรรยายฉบับครบทุกสไลด์</h1>
+            <p class="text-slate-300 mt-3 text-sm md:text-base">ใช้เป็นโพยบรรยายแบบ TED Talk ให้สอดคล้องกับสไลด์ใน index.html ทั้ง 17 สไลด์ รวมทุกกิจกรรมตั้งแต่ Icebreaker ถึง Q&amp;A/Slido</p>
         </header>
 
         <section class="glass rounded-2xl p-6 md:p-8 mb-8">
-            <h2 class="text-2xl font-semibold text-white mb-4">🗓️ โครงสร้างคลาส (Agenda: 09.00 - 12.00)</h2>
+            <h2 class="text-2xl font-semibold text-white mb-4">โครงเวลารวม (แนะนำ)</h2>
             <ul class="agenda-list space-y-3 text-slate-200">
-                <li>09.00 - 09.15 (15 นาที): 1. Opening + Icebreaker (Hello World / คุณเคยลืมเวลาไหม?)</li>
-                <li>09.15 - 09.40 (25 นาที): 2. What is Flow State? + ประโยชน์ของ Flow + Real-Life Flow</li>
-                <li>09.40 - 10.05 (25 นาที): 3. Flow in Action + Decode the Flow Cocktail (5 สารเคมีของ Flow)</li>
-                <li>10.05 - 10.20 (15 นาที): 4. The Flow Equation + Conditions for Flow + Quick Flow Triggers</li>
-                <li>10.20 - 10.30 (10 นาที): ☕ พักเบรก</li>
-                <li>10.30 - 10.45 (15 นาที): 5. ศัตรูตัวร้ายของ Flow (Disruptions / Multitasking / Notifications)</li>
-                <li>10.45 - 11.20 (35 นาที): 6. กิจกรรม The Lego Challenge (เข้าสู่สภาวะ Flow)</li>
-                <li>11.20 - 11.35 (15 นาที): 7. Debrief ถอดบทเรียนจากเลโก้</li>
-                <li>11.35 - 11.45 (10 นาที): 8. สรุปเนื้อหา + เทคนิคนำไปใช้จริงก่อนเริ่มงาน</li>
-                <li>11.45 - 11.55 (10 นาที): 9. Kahoot! ตอบคำถามชิงรางวัล</li>
-                <li>11.55 - 12.00 (5 นาที): 10. Q&A และประเมินผ่าน Slido</li>
+                <li>09.00 - 09.12: Slide 1-3 เปิดเวที + แนะนำตัว + Icebreaker ลืมเวลา</li>
+                <li>09.12 - 09.35: Slide 4-7 นิยาม Flow + ประโยชน์ + ตัวอย่างจริง + Flow in Action</li>
+                <li>09.35 - 09.55: Slide 8-12 วิทยาศาสตร์สมอง + Flow Cocktail + Equation + Conditions + Quick Triggers</li>
+                <li>09.55 - 10.10: Slide 13 ศัตรูตัวร้ายของ Flow + เชื่อมสู่กิจกรรม</li>
+                <li>10.10 - 10.40: Slide 14 Lego Challenge (กิจกรรมปฏิบัติ)</li>
+                <li>10.40 - 10.55: Slide 15 Debrief ถอดบทเรียน</li>
+                <li>10.55 - 11.10: Slide 16 Kahoot</li>
+                <li>11.10 - 11.25: Slide 17 Closing + Q&amp;A + Slido</li>
             </ul>
+            <p class="mini mt-4">หมายเหตุ: ปรับนาทีจริงได้ตามขนาดผู้เรียนและเวลาตอบคำถาม</p>
         </section>
 
         <section class="glass rounded-2xl p-6 md:p-8 mb-8">
-            <h2 class="text-2xl font-semibold text-white mb-4">🎤 Script การพูด: "แฮ็กสมองสู่ Flow State: สมาธิในโลกยุคดิจิทัล"</h2>
+            <h2 class="text-2xl font-semibold text-white mb-5">Script การพูดแบบ TED Talk (ตรงตามทุกสไลด์)</h2>
 
-            <div class="space-y-6 script-list">
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[1. เปิดเรื่อง - ดึงความสนใจด้วยประสบการณ์ร่วม]</h3>
-                    <p class="mt-2 text-slate-200">(เดินขึ้นเวที ยิ้มแย้ม สบายๆ เป็นกันเอง)</p>
-                    <p class="mt-2 text-slate-200"><span class="key">“สวัสดีครับทุกคน... มีใครในห้องนี้เคยมีช่วงเวลาที่ทำอะไรเพลินๆ จนลืมโลกไหมครับ? สำหรับผม บางทีมันคือตอนที่กำลังเขียนโค้ดแก้บั๊กตอนดึกๆ จังหวะที่กำลังทรงตัวอยู่บนเวคบอร์ด หรือตอนกำลังชู้ตบาส... รู้ตัวอีกที อ้าว! ผ่านไป 3 ชั่วโมงแล้ว ความหิวหายไป ความง่วงไม่มี เสียงในหัวที่คอยบ่นนู่นนี่นั่นเงียบสนิท มีแค่ตัวเรากับสิ่งที่อยู่ตรงหน้า... ใครเคยฟินกับความรู้สึกแบบนี้บ้างครับ ขอเจอมือหน่อย”</span> (ยิ้มและผายมือให้คนดูยกมือ)</p>
-                    <p class="mt-2 text-slate-200"><span class="key">“เยี่ยมเลยครับ ให้เวลาสั้นๆ 1 นาที หันไปขิงใส่เพื่อนข้างๆ หน่อยครับว่า กิจกรรมที่ทำให้คุณลืมเวลาได้คืออะไร”</span></p>
-                    <p class="mt-2 text-slate-200">(เปิดเพลงจังหวะสบายๆ ให้คนคุยกัน)</p>
-                    <p class="mt-2 text-slate-200"><span class="key">“ขอบคุณครับ... อาการลืมโลก ลืมเวลา ที่เราเพิ่งคุยกัน ฝรั่งและนักวิทยาศาสตร์เขาเรียกมันว่า 'สภาวะ Flow State' ครับ... แต่วันนี้ผมจะมาเล่าให้ฟังว่า จริงๆ แล้วมันก็คือเรื่องเดียวกับที่พระพุทธองค์สอนเรามาตลอด นั่นคือสภาวะของ 'สมาธิ' ที่มี 'สติ' กำกับอยู่นั่นเองครับ”</span></p>
-                </div>
+            <div class="space-y-5">
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 1 - Unlocking Flow State (Opening)</h3>
+                    <p class="mini">ภาพรวม: เปิดอารมณ์และตั้งคำถามใหญ่ของคลาส</p>
+                    <div class="line mt-2">
+                        <p><span class="key">"วันนี้เราไม่ได้มาคุยแค่เรื่อง Productivity แต่เรามาคุยเรื่องสภาวะที่ทำให้มนุษย์ใช้ศักยภาพสูงสุดได้จริง"</span> ชวนคนดูมองชื่อสไลด์ แล้วเว้นจังหวะ 2 วินาที</p>
+                        <p>เล่าด้วยน้ำเสียงนิ่งแต่หนักแน่นว่า <span class="key">Flow State คือช่วงที่งานยาก แต่ใจนิ่ง, สมองไว, และเรารู้สึกเป็นหนึ่งเดียวกับสิ่งที่ทำ</span></p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ก่อนคุยทฤษฎี ผมอยากให้ทุกคนรู้จักคนพูดวันนี้ในมุมที่ไม่ใช่แค่ตำแหน่งงาน"</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[2. เข้าเนื้อหา - วิทยาศาสตร์พบกับธรรมะ]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“เวลาที่เราเข้าสู่ Flow State หรือตอนที่เรามีสมาธิจดจ่อมากๆ งานวิจัยทางสมอง (Neuroscience) ค้นพบความจริงที่น่าทึ่งอย่างหนึ่งครับ... คือสมองเราไม่ได้ทำงาน 'หนักขึ้น' นะครับ แต่มันใช้พลังงาน 'ลดลง'”</span></p>
-                    <p class="mt-2 text-slate-200"><span class="key">“สมองส่วนหน้าที่เรียกว่า Prefrontal Cortex ซึ่งปกติจะคอยคิดวิเคราะห์ กังวล กะเกณฑ์ หรือถ้าพูดภาษาธรรมะคือส่วนที่สร้าง 'อัตตา' หรือ 'ตัวกูของกู'... มันจะถูกหรี่สวิตช์ลงชั่วคราวครับ พอความรู้สึกถึงตัวตนมันหายไป เราถึงไม่รู้สึกเหนื่อย ไม่รู้สึกกลัว สมองจะหลั่งสารความสุขอย่างโดปามีนออกมา คลื่นสมองจะสงบลงไปอยู่ในระดับคลื่น Alpha และ Theta ซึ่งเป็นคลื่นความถี่เดียวกับตอนที่เรานั่งสมาธิลึกๆ เลยครับ”</span></p>
-                    <p class="mt-2 text-slate-200"><span class="key">“คำถามคือ แล้วเราจะดึงเอาสภาวะ 'ตื่นรู้' แบบนี้ มาใช้กับการทำงานในออฟฟิศทุกๆ วันได้ยังไง?”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 2 - Hello, World! (แนะนำตัวผู้บรรยาย)</h3>
+                    <p class="mini">ภาพรวม: เชื่อมความน่าเชื่อถือกับความเป็นมนุษย์</p>
+                    <div class="line mt-2">
+                        <p>พาเล่าทีละบรรทัดในสไลด์: Tech &amp; AI, Mind Explorer, กีฬา, Life Balance, Wellness</p>
+                        <p><span class="key">"ผมเชื่อว่าเทคโนโลยีอย่างเดียวไม่พอ ถ้าไม่เข้าใจจิตใจตัวเอง เราจะเก่งแต่เหนื่อย"</span></p>
+                        <p>ตัวอย่างเล่าเรื่องสั้น: เล่าวันที่ทำโปรเจกต์หนัก แต่แก้ปัญหาได้จริงตอนที่จัดสภาวะตัวเองก่อน เริ่มงานด้วยหายใจลึก + ปิดแจ้งเตือน</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ทีนี้ขอถามคำถามที่สำคัญที่สุดของวันนี้"</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[3. กิจกรรมกลุ่ม - ทางสายกลางของการทำงาน]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“กฎเหล็กข้อแรกของ Flow คือ 'มัชฌิมาปฏิปทา' หรือทางสายกลางครับ... ถ้างานมันง่ายไป เราจะเบื่อ (ถีนมิทธะ - ความหดหู่เคลิบเคลิ้ม) แต่ถ้างานมันยากไป เราจะเครียด (อุทธัจจะ - ความฟุ้งซ่านรำคาญใจ) สภาวะ Flow จะเกิดตรงจุดสมดุลพอดี คือจุดที่ความท้าทายของงาน มันสูงกว่าสกิลที่เรามีอยู่นิดหน่อย ประมาณ 4% เพื่อให้เราต้องงัดเอาความพยายามออกมาใช้”</span></p>
-                    <p class="mt-2 text-slate-200"><span class="key">“เดี๋ยวเรามาลองสำรวจตัวเองกันครับ ให้แต่ละโต๊ะระดมสมอง 5 นาที แบ่งงานในชีวิตประจำวันออกเป็น 3 กอง: งานที่น่าเบื่อ งานที่เครียดปวดหัว และงานที่ทำแล้วลื่นไหล... แล้วเดี๋ยวส่งตัวแทนแชร์ให้เพื่อนฟังหน่อยครับ”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 3 - คุณเคยลืมเวลาไหม?</h3>
+                    <p class="mini">กิจกรรม: Pair Share 1 นาที</p>
+                    <div class="line mt-2">
+                        <p><span class="key">"ใครเคยทำอะไรเพลินจนลืมหิว ลืมง่วง ลืมเวลา?"</span> ขอให้ยกมือ</p>
+                        <p>ให้จับคู่คุย 1 นาที: กิจกรรมอะไรทำให้คุณลื่นไหลที่สุด</p>
+                        <p>หลังครบเวลา: <span class="key">"สิ่งที่คุณเพิ่งเล่ากัน คือประตูบานแรกของ Flow"</span></p>
+                    </div>
+                    <p class="cue mt-3">Facilitator cue: เปิดเพลงเบาๆ ระหว่างให้คุยคู่ และเดินฟังตัวอย่าง 2-3 กลุ่ม</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[4. กลับจากเบรก - ตัดนิวรณ์ (สิ่งรบกวน)]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“เมื่อกี้เราเห็นแล้วว่างานแบบไหนทำให้เรา Flow... แต่รู้ไหมครับว่าอะไรคือศัตรูตัวร้ายที่สุดในยุคนี้? ... มันคือ 'Notification จากมือถือ' และการพยายามทำหลายๆ อย่างพร้อมกัน (Multitasking) ครับ”</span></p>
-                    <p class="mt-2 text-slate-200"><span class="key">“ในทางธรรม สิ่งเหล่านี้คือ 'นิวรณ์' หรือสิ่งกีดขวางสมาธิ งานวิจัยบอกเลยนะครับว่า แค่คุณละสายตาจากงานไปดูไลน์แว้บเดียว สมองจะรวนทันที และคุณต้องใช้เวลาเฉลี่ยถึง 20 กว่านาที กว่าจะดึงสติให้กลับมาโฟกัสได้ลึกเท่าเดิม... ดังนั้น ใครคุมมือถือได้ คนนั้นคุมสติและศักยภาพตัวเองได้ครับ”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 4 - What is Flow State?</h3>
+                    <p class="mini">ภาพรวม: อธิบายนิยาม, The Zone, คลื่นสมอง, ภาวะไร้อัตตา</p>
+                    <div class="line mt-2">
+                        <p>ชี้คำหลัก Action + Attention รวมเป็นหนึ่งเดียว และยกคำว่า The Zone</p>
+                        <p><span class="key">"Flow ไม่ใช่แค่มีสมาธิ แต่คือการที่ตัวตนเงียบลง แล้วศักยภาพจริงของเราพูดแทน"</span></p>
+                        <p>อ้างอิงวิดีโอในสไลด์: นักกีฬา/การเคลื่อนไหวที่ดูเหมือนคิดน้อยลงแต่แม่นขึ้น</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ถ้าเข้า Flow แล้วชีวิตการทำงานเปลี่ยนยังไง มาดูผลลัพธ์ที่วัดได้"</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[5. กิจกรรม Lego - ฝึกเข้าสู่ Flow]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“คุยทฤษฎีมาเยอะแล้ว เรามาลองปฏิบัติบูชากันดีกว่า บนโต๊ะมีเลโก้ 200 ชิ้น กติกาการเข้าสู่ Flow มี 3 ข้อครับ:”</span></p>
-                    <ul class="list-disc pl-6 mt-2 text-slate-200">
-                        <li><span class="key">เป้าหมายชัดเจน:</span> ต่อให้เสร็จ</li>
-                        <li><span class="key">รู้ผลทันที:</span> ชิ้นไหนต่อผิด ต่อไม่ลงล็อค เราจะรู้ตัวแล้วแก้เลย (เหมือนการมีสติรู้ทันความคิด)</li>
-                        <li><span class="key">ตัดสิ่งรบกวน:</span> ขอให้ทุกคนคว่ำหน้าจอมือถือลงครับ</li>
-                    </ul>
-                    <p class="mt-2 text-slate-200"><span class="key">“เราจะใช้เวลา 30 นาทีนี้ โฟกัสอยู่กับปัจจุบันขณะ ผมจะช่วยปรับบรรยากาศโดยเปิดคลื่นเสียงความถี่พิเศษ (Binaural Beats) ที่จูนเข้ากับคลื่นสมอง Alpha เพื่อให้ทุกคนเข้าสมาธิได้ง่ายขึ้น... ถ้าพร้อมแล้ว เริ่มครับ!”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 5 - ปลดล็อกพลัง Flow: แล้วได้อะไร?</h3>
+                    <p class="mini">ภาพรวม: Productivity, Deep Work, Joy, Creativity, Learning, Skill Mastery</p>
+                    <div class="line mt-2">
+                        <p>เล่าเป็นจังหวะ 6 ข้อแบบสั้น กระแทกใจ ข้อละ 1 ประโยค</p>
+                        <p><span class="key">"Flow คือการทำงานดีขึ้น เร็วขึ้น และสุขขึ้นพร้อมกัน ไม่ใช่แลกอย่างใดอย่างหนึ่ง"</span></p>
+                        <p>ยกเคส: งานที่ปกติใช้ 3 ชั่วโมง เหลือ 90 นาทีเมื่อเข้าช่วง Deep Work เต็มๆ</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ทฤษฎีอาจสวย แต่ชีวิตจริงสำคัญกว่า"</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[6. พูดคุยหลังกิจกรรม (Debrief)]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“เป็นยังไงบ้างครับ? เวลาผ่านไปเร็วกว่าปกติไหม? มีใครรู้สึกเหมือนหูดับ ไม่ได้ยินเสียงแอร์ เสียงคนคุยกันเลยบ้าง? นั่นแหละครับ คุณเพิ่งก้าวขาเข้าไปใน Flow State เรียบร้อยแล้ว พอเรามีเป้าหมายที่ชัดเจน และตัดสิ่งรบกวนออกไป จิตเราจะมีอารมณ์เป็นหนึ่งเดียว หรือที่เรียกว่า 'เอกัคคตารมณ์' แล้วสภาวะตื่นรู้ก็ตามมาทันทีครับ”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 6 - Real-Life Flow</h3>
+                    <p class="mini">ภาพรวม: งาน, กีฬา, การวิ่ง และตัวเลข 2-5 เท่า</p>
+                    <div class="line mt-2">
+                        <p>ชี้ทีละการ์ด: มืออาชีพทำงาน, นักกีฬาเข้าโซน, Runner's High</p>
+                        <p><span class="key">"Flow ไม่ได้อยู่แค่ในห้องสมุดหรือห้องประชุม มันอยู่ในสนาม ในครัว ในสตูดิโอ และในทุกอาชีพ"</span></p>
+                        <p>ขยายตัวเลข productivity 2-5 เท่า พร้อมบอกว่าเงื่อนไขคือต้องออกแบบสภาพแวดล้อมให้ถูก</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ต่อไปเราจะเห็นภาพ Flow ที่กำลังเกิดขึ้นจริงแบบสดๆ ผ่านตัวอย่างการลงมือทำ"</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[7. สรุปเนื้อหา]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“ก่อนเริ่มงานสำคัญในวันพรุ่งนี้ ผมอยากชวนทุกคนลองนำเทคนิคนี้ไปใช้นะครับ:”</span></p>
-                    <ul class="list-disc pl-6 mt-2 text-slate-200">
-                        <li><span class="key">บล็อกเวลา (Time Block):</span> ให้ตัวเองเลย 1-2 ชั่วโมง</li>
-                        <li><span class="key">ปิด Notification:</span> ตัดนิวรณ์ให้หมด</li>
-                        <li><span class="key">อานาปานสติก่อนเริ่ม:</span> หายใจเข้า 4 วินาที กลั้นไว้ 4 วินาที แล้วค่อยๆ ปล่อยออกยาวๆ 8 วินาที สัก 3-4 รอบ เพื่อปรับระบบประสาทให้ร่างกายนิ่งที่สุด</li>
-                        <li><span class="key">ทำทีละอย่าง (Single-tasking):</span> อยู่กับปัจจุบันขณะเท่านั้น</li>
-                    </ul>
-                    <p class="mt-2 text-slate-200"><span class="key">“ถ้าเราฝึกเข้าสู่ Flow State ได้บ่อยๆ งานที่เราทำมันจะไม่ได้เป็นแค่ภาระอีกต่อไป แต่มันจะกลายเป็นการปฏิบัติธรรมในชีวิตประจำวัน... งานก็สำเร็จด้วยดี และใจเราก็มีความสุข มีความเบาสบาย โดยที่เราไม่ต้องฝืนอะไรเลยครับ ขอบคุณครับ”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 7 - Flow in Action</h3>
+                    <p class="mini">ภาพรวม: ดนตรี, DJ, เชฟ, โค้ดดิ้ง, กีฬา, Lego</p>
+                    <div class="line mt-2">
+                        <p>เปิดด้วยวิดีโอ แล้วชี้ว่า Flow มีภาษากลางคือจังหวะ-ฟีดแบ็ก-การจดจ่อ</p>
+                        <p><span class="key">"ต่างอาชีพ แต่กลไกเดียวกัน: เป้าหมายชัด, ข้อมูลย้อนกลับทันที, และไม่โดนดึงออกจากสมาธิ"</span></p>
+                        <p>โยงการ์ด Lego เพื่อปูสู่กิจกรรมใหญ่ช่วงท้าย</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "แล้วในสมองจริงๆ เกิดอะไรตอนเราลื่นไหล?"</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[8. ควิซสนุกๆ ชิงรางวัล]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“ก่อนจากกัน วันนี้เรามีเกม Kahoot สนุกๆ มาทบทวนความรู้ทั้งฝั่งวิทย์และฝั่งธรรมะกันนิดนึง ใครตอบไว ตอบถูก มีรางวัลพิเศษให้ด้วยครับ เตรียมมือถือขึ้นมาสแกนได้เลย!”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 8 - ภาพสมองและ Flow Science Visual</h3>
+                    <p class="mini">ภาพรวม: สไลด์ภาพเปรียบเทียบ ใช้เล่าเชิงภาพใหญ่</p>
+                    <div class="line mt-2">
+                        <p>ใช้สไลด์ภาพนี้เป็นช่วงเล่าเรื่อง: สมองลดการประมวลผลที่ไม่จำเป็น เพื่อทุ่มให้สิ่งตรงหน้า</p>
+                        <p><span class="key">"ในภาวะ Flow เราไม่ได้ฝืน สมองเหมือนเปลี่ยนเกียร์อัตโนมัติไปโหมดที่มีประสิทธิภาพสูง"</span></p>
+                    </div>
+                    <p class="cue mt-3">Transition: "โหมดนี้เกิดขึ้นได้เพราะค็อกเทลเคมี 5 ตัวที่ทำงานร่วมกัน"</p>
+                </article>
 
-                <div class="border-l-4 border-orange-400 pl-4">
-                    <h3 class="text-xl font-semibold text-orange-300">[9. Q&A และประเมินผ่าน Slido]</h3>
-                    <p class="mt-2 text-slate-200"><span class="key">“เปิดช่วง Q&A ครับ และอย่าลืมสแกน Slido เพื่อประเมินคลาสวันนี้ด้วยนะครับ ขอบคุณครับ”</span></p>
-                </div>
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 9 - Decode The Flow Cocktail (5 สารเคมี)</h3>
+                    <p class="mini">ภาพรวม: Dopamine, Norepinephrine, Endorphins, Anandamide, Serotonin</p>
+                    <div class="line mt-2">
+                        <p>เล่าแบบ Story Arc: เริ่มอยากทำ, ตื่นตัว, ทนความล้า, ไอเดียเปิด, แล้วอิ่มใจหลังทำสำเร็จ</p>
+                        <p><span class="key">"Flow ไม่ใช่เวทมนตร์ มันคือชีววิทยาที่เราฝึกและออกแบบได้"</span></p>
+                        <p>ยกตัวอย่างต่อสาร 1 ประโยคจากสไลด์ เช่น Dopamine = โจทย์ท้าทายกว่าเดิม 4%, Serotonin = ฉลองชัยเล็กๆ หลังจบงาน</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ถ้าจะจำแค่สมการเดียวของวันนี้ ให้จำสไลด์ถัดไป"</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 10 - The Flow Equation</h3>
+                    <p class="mini">ภาพรวม: Challenge vs Skill, เบื่อ-เครียด-โซนลื่นไหล</p>
+                    <div class="line mt-2">
+                        <p>ชี้การ์ด 3 สภาวะ: ง่ายเกินไป = เบื่อ, ยากเกินไป = เครียด, ยากกว่าเดิมพอดี = Flow Zone</p>
+                        <p><span class="key">"เคล็ดลับไม่ใช่ทำงานที่ง่ายกว่า แต่คือออกแบบงานที่ยากขึ้นนิดเดียวแบบฉลาด"</span></p>
+                        <p>ถามผู้ฟัง: งานปัจจุบันคุณอยู่โซนไหน</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "เมื่อรู้สมการแล้ว เราต้องมีเงื่อนไข 4 ข้อให้ครบ"</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 11 - Conditions for Flow</h3>
+                    <p class="mini">ภาพรวม: Clear Goal, Balance, Immediate Feedback, Deep Focus</p>
+                    <div class="line mt-2">
+                        <p>เล่า 4 ข้อให้เป็น Checklist ก่อนเริ่มงานสำคัญ</p>
+                        <p><span class="key">"ถ้าขาดข้อใดข้อหนึ่ง Flow จะไม่เสถียร"</span></p>
+                        <p>เน้น 4% อีกครั้งให้ฝังในใจผู้ฟัง</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "มาถึงเครื่องมือที่ทำได้เลยภายใน 5 นาที"</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 12 - Quick Flow Triggers</h3>
+                    <p class="mini">ภาพรวม: 6 เทคนิคก่อนเริ่มงาน</p>
+                    <div class="line mt-2">
+                        <p>ชี้ทีละการ์ด: ปิดแจ้งเตือน, ตั้งเจตนาเดียว, หายใจ 4-4-8, Time Block 1-2 ชั่วโมง, Observe Flow, Single-tasking</p>
+                        <p><span class="key">"เริ่มจากเลือก 2-3 ข้อ ทำซ้ำทุกวัน จนเป็นพิธีกรรมก่อนทำงาน"</span></p>
+                        <p>ตัวอย่างเล่าเรื่อง: ก่อนเขียนโค้ดยากทุกครั้ง ใช้หายใจ 4-4-8 แล้วเปิดโหมดห้ามรบกวน 90 นาที</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ก่อนเข้ากิจกรรมจริง เรามาดูตัวทำลาย Flow ที่แรงที่สุดในยุคนี้"</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 13 - ศัตรูตัวร้ายของ Flow</h3>
+                    <p class="mini">ภาพรวม: Multitasking, Notification, Error rate สูง</p>
+                    <div class="line mt-2">
+                        <p>พูดชัด: Multitasking คือการสลับงานเร็ว ไม่ใช่ทำหลายงานพร้อมกันจริง</p>
+                        <p><span class="key">"แค่เด้งไปเช็กมือถือ 10 วินาที คุณไม่ได้เสีย 10 วินาที แต่เสียโมเมนตัมของสมองทั้งชุด"</span></p>
+                        <p>ปิดด้วยประโยคในสไลด์: คนที่คุมสิ่งรบกวนได้ คือคนที่คุม Flow ได้</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "พอรู้หลักแล้ว เราจะทดลองเข้า Flow ด้วยมือเราเอง"</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 14 - The Lego Challenge (กิจกรรมหลัก)</h3>
+                    <p class="mini">กิจกรรม: 30 นาที ปฏิบัติจริง</p>
+                    <div class="line mt-2">
+                        <p>สคริปต์เปิดกิจกรรม: <span class="key">"บนโต๊ะมีเลโก้ 200 ชิ้น วันนี้เราไม่ได้แข่งสวยที่สุด แต่เราฝึกเข้าสู่ภาวะที่ดีที่สุด"</span></p>
+                        <p>ประกาศกติกา 3 ข้อจากสไลด์: เป้าหมายชัด, รู้ผลทันที, Deep Focus</p>
+                        <p>สั่งปฏิบัติ: คว่ำมือถือ, ตั้งบทบาทในทีม, เริ่มจับเวลา</p>
+                    </div>
+                    <p class="cue mt-3">Facilitator cue ระหว่างกิจกรรม:
+                        นาทีที่ 10: เตือนให้ทีมทบทวนเป้าหมาย
+                        นาทีที่ 20: เตือนให้ลดการพูดคุยนอกโจทย์
+                        นาทีที่ 28: แจ้งเวลา 2 นาทีสุดท้ายและให้ทีมเก็บบทเรียนในใจ</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 15 - Debrief ถอดบทเรียนจากเลโก้</h3>
+                    <p class="mini">กิจกรรม: แชร์สะท้อนผล โต๊ะละ 1 คน</p>
+                    <div class="line mt-2">
+                        <p>คำถาม 3 ข้อจากสไลด์: เวลาผ่านเร็วไหม, ได้ยินสิ่งรบกวนลดลงไหม, อะไรทำให้ทีมโฟกัส</p>
+                        <p><span class="key">"เมื่อเป้าหมายชัดและสิ่งรบกวนน้อย สมองจะหยุดฟุ้งซ่าน แล้วเปลี่ยนเป็นพลังสร้างสรรค์"</span></p>
+                        <p>ให้แต่ละโต๊ะแชร์บทเรียนที่นำกลับไปใช้พรุ่งนี้ได้ทันที 1 ข้อ</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "ก่อนปิดคลาส มาทดสอบความเข้าใจแบบสนุกๆ"</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 16 - KAHOOT!</h3>
+                    <p class="mini">กิจกรรม: ทบทวนเนื้อหา + สร้างพลังห้อง</p>
+                    <div class="line mt-2">
+                        <p>สคริปต์ชวนเล่น: <span class="key">"หยิบมือถือขึ้นมาได้เลยครับ รอบนี้ไม่ใช่สิ่งรบกวน แต่เป็นอาวุธล่ารางวัล"</span></p>
+                        <p>ย้ำกติกา: ตอบถูกและเร็ว, ให้เชียร์กันได้, เน้นเรียนรู้ไม่กดดัน</p>
+                        <p>หลังจบ: สรุป 3 คำตอบที่คนพลาดบ่อยเพื่อ reinforce เนื้อหาหลัก</p>
+                    </div>
+                    <p class="cue mt-3">Transition: "จากเกมสนุกๆ กลับมาสู่คำถามชีวิตจริงว่าพรุ่งนี้จะเปลี่ยนอะไร"</p>
+                </article>
+
+                <article class="script-block">
+                    <h3 class="text-xl font-semibold text-orange-300">Slide 17 - Closing Visual + Q&amp;A + Slido</h3>
+                    <p class="mini">ภาพรวม: ปิดด้วยภาพจำ, commitment และการประเมิน</p>
+                    <div class="line mt-2">
+                        <p>Closing Script: <span class="key">"Flow State ไม่ใช่พรสวรรค์ของคนพิเศษ แต่เป็นทักษะของคนที่ยอมออกแบบใจตัวเอง"</span></p>
+                        <p>ชวน Commitment 24 ชั่วโมง: ให้ผู้เรียนเขียน 1 งานที่ต้องทำแบบ Flow พร้อม Trigger ที่จะใช้ 2 ข้อ</p>
+                        <p>เปิด Q&amp;A และปิดด้วย Slido: <span class="key">"ขอบคุณที่ให้พลังห้องนี้ วันนี้คุณไม่ได้แค่ฟังเรื่อง Flow แต่คุณได้สัมผัสมันแล้ว"</span></p>
+                    </div>
+                    <p class="cue mt-3">Facilitator cue: ให้ QR Slido ค้างจออย่างน้อย 2-3 นาที ระหว่างรับคำถามสุดท้าย</p>
+                </article>
             </div>
         </section>
 
-        <footer class="text-slate-500 text-sm">พิมพ์หน้านี้เพื่อเป็นโพย หรือเปิดบน iPad ระหว่างบรรยาย</footer>
+        <section class="glass rounded-2xl p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-white mb-4">สรุป Key Message (พูดซ้ำก่อนปิดคลาส)</h2>
+            <ul class="list-disc pl-6 space-y-2 text-slate-200">
+                <li>Flow เกิดเมื่อ Challenge และ Skill สมดุล โดยเพิ่มความท้าทายประมาณ 4%</li>
+                <li>4 เงื่อนไขหลัก: เป้าหมายชัดเจน, สมดุลความยาก, Feedback ทันที, ไม่มีสิ่งรบกวน</li>
+                <li>Quick Trigger ที่ใช้ได้ทันที: ปิดแจ้งเตือน, หายใจ 4-4-8, Time Block, Single-tasking</li>
+                <li>Lego Challenge คือหลักฐานเชิงประสบการณ์ว่าทุกคนฝึกเข้าสู่ Flow ได้</li>
+            </ul>
+        </section>
+
+        <footer class="text-slate-400 text-sm">เอกสารนี้ออกแบบให้ใช้เป็นโพยพูดหน้าเวที, อ่านบน iPad, หรือพิมพ์เป็นเอกสารบรรยาย</footer>
     </main>
 </body>
 </html>
