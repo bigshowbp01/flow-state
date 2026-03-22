@@ -1628,6 +1628,19 @@
             transform: scale(1.02);
         }
 
+        .lego-challenge-image {
+            height: min(44vh, 420px);
+            max-height: 420px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .lego-challenge-image {
+                height: min(36vh, 360px);
+                max-height: 360px;
+            }
+        }
+
         #progress-container {
             position: absolute;
             bottom: 0;
@@ -2533,11 +2546,10 @@
                 <div class="content-layout layout-stack-reverse">
                     <div class="flex-1 w-full">
                         <img src="Gemini_Generated_Image_teh4gxteh4gxteh4.png"
-                            alt="Colorful lego pattern" class="slide-image border-yellow-500/30 mb-6 md:mb-0">
+                            alt="Colorful lego pattern" class="slide-image lego-challenge-image border-yellow-500/30 mb-6 md:mb-0">
                         <div
                             class="mt-3 w-full px-4 py-2.5 bg-gradient-to-r from-sky-500 to-blue-600 rounded-xl shadow-[0_0_14px_rgba(56,189,248,0.26)] animate-pulse text-center">
                             <h3 class="text-xl font-bold text-white mb-0.5">Let's get into the Zone!</h3>
-                            <p class="text-orange-100 text-xs">(เวลา 30 นาที)</p>
                         </div>
                     </div>
                     <div class="flex-1 flex flex-col justify-center space-y-5">
@@ -2607,10 +2619,13 @@
             <div class="glass-panel text-center">
                 <h2 class="text-5xl font-bold mb-8 text-white"><span class="title-key">KAHOOT!</span></h2>
                 <p class="text-2xl text-slate-200 mb-6">ตอบคำถามชิงรางวัลพิเศษ</p>
-                <div
+                <a
+                    href="https://create.kahoot.it/my-library/kahoots/all"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-block px-6 py-4 bg-gradient-to-r from-amber-400 to-orange-500 rounded-2xl shadow-[0_0_20px_rgba(251,191,36,0.35)] text-white text-xl font-semibold">
                     เตรียมมือถือของคุณให้พร้อม
-                </div>
+                </a>
             </div>
         </section>
 
@@ -2620,10 +2635,10 @@
             </div>
             <div class="slide-overlay"></div>
 
-            <div class="glass-panel flex items-center justify-center p-4">
+            <div class="glass-panel flex items-center justify-center p-3" style="width: auto; max-width: 90vw; max-height: 90vh; padding: 0.75rem;">
                 <img src="unnamed (5).jpg"
                     alt="Conclusion visual"
-                    class="w-full max-w-6xl max-h-[78vh] object-contain rounded-2xl border border-sky-500/20 shadow-2xl">
+                    class="w-auto h-auto max-w-full max-h-[86vh] object-contain rounded-2xl border border-sky-500/20 shadow-2xl">
             </div>
         </section>
 
