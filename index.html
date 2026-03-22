@@ -1581,6 +1581,52 @@
             }
         }
 
+        @keyframes conclusionGoldBreathing {
+            0%, 100% {
+                opacity: 0.72;
+                transform: scale(1);
+                filter: blur(16px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.06);
+                filter: blur(26px);
+            }
+        }
+
+        .conclusion-glow-card {
+            position: relative;
+            isolation: isolate;
+            overflow: visible;
+        }
+
+        .conclusion-glow-card::before {
+            content: "";
+            position: absolute;
+            inset: -36px;
+            border-radius: 2.3rem;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(255, 224, 130, 0) 42%, rgba(255, 228, 132, 0.7) 58%, rgba(252, 211, 77, 0.62) 70%, rgba(234, 179, 8, 0.28) 83%, rgba(234, 179, 8, 0) 100%);
+            filter: blur(6px);
+            z-index: -1;
+            pointer-events: none;
+            animation: conclusionGoldBreathing 4.8s ease-in-out infinite;
+        }
+
+        .conclusion-glow-card::after {
+            content: "";
+            position: absolute;
+            inset: -62px;
+            border-radius: 2.8rem;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(255, 244, 204, 0.62) 0%, rgba(255, 228, 132, 0.46) 32%, rgba(250, 204, 21, 0.28) 56%, rgba(234, 179, 8, 0.12) 70%, rgba(234, 179, 8, 0) 88%);
+            filter: blur(34px);
+            opacity: 0.95;
+            z-index: -2;
+            pointer-events: none;
+            animation: conclusionGoldBreathing 4.8s ease-in-out infinite reverse;
+        }
+
         .quoted-text {
             color: #ffd772;
             font-weight: 700;
@@ -2635,7 +2681,7 @@
             </div>
             <div class="slide-overlay"></div>
 
-            <div class="glass-panel flex items-center justify-center p-3" style="width: auto; max-width: 90vw; max-height: 90vh; padding: 0.75rem;">
+            <div class="glass-panel conclusion-glow-card flex items-center justify-center p-3" style="width: auto; max-width: 90vw; max-height: 90vh; padding: 0.75rem;">
                 <img src="unnamed (5).jpg"
                     alt="Conclusion visual"
                     class="w-auto h-auto max-w-full max-h-[86vh] object-contain rounded-2xl border border-sky-500/20 shadow-2xl">
