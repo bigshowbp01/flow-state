@@ -173,7 +173,7 @@
         }
 
         .title-key-cyan {
-            color: #7dd3fc;
+            color: #16f774;
             text-shadow: 0 0 10px rgba(125, 211, 252, 0.28);
         }
 
@@ -307,6 +307,7 @@
             line-height: 2.25rem;
             color: #e2e8f0;
             font-weight: 700;
+            margin-top: -0.4rem;
             margin-bottom: 0.1rem;
             grid-column: 1 / -1;
         }
@@ -354,21 +355,50 @@
             line-height: 1.35rem;
             font-weight: 700;
             color: #f8fafc;
+            text-shadow: 0 0 10px rgba(15, 23, 42, 0.45);
         }
 
         .flow-equation-slide .equation-mini-sub {
             font-size: 0.86rem;
             line-height: 1.2rem;
             margin-top: 0.18rem;
+            color: #dbeafe;
+        }
+
+        .flow-equation-slide .equation-mini-card:nth-child(1) .equation-mini-title {
+            color: #fecaca;
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.35);
+        }
+
+        .flow-equation-slide .equation-mini-card:nth-child(1) .equation-mini-sub {
+            color: #fda4af;
+        }
+
+        .flow-equation-slide .equation-mini-card:nth-child(2) .equation-mini-title {
+            color: #fed7aa;
+            text-shadow: 0 0 10px rgba(249, 115, 22, 0.35);
+        }
+
+        .flow-equation-slide .equation-mini-card:nth-child(2) .equation-mini-sub {
+            color: #fdba74;
+        }
+
+        .flow-equation-slide .equation-mini-card:nth-child(3) .equation-mini-title {
+            color: #bae6fd;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+        }
+
+        .flow-equation-slide .equation-mini-card:nth-child(3) .equation-mini-sub {
+            color: #67e8f9;
         }
 
         .flow-equation-slide .equation-footer {
             margin-top: 1rem;
             text-align: center;
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(148, 163, 184, 0.3);
-            border-radius: 0.85rem;
-            padding: 0.8rem 1rem;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
             color: #e2e8f0;
             font-size: 1rem;
         }
@@ -395,11 +425,15 @@
         }
 
         .what-is-flow-slide .term-wave {
-            color: #a5b4fc;
+            color: #da2bf1;
         }
 
         .what-is-flow-slide .term-science {
             color: #86efac;
+        }
+
+        .what-is-flow-slide .term-psychology {
+            color: #f04c46;
         }
 
         .what-is-flow-slide .glass-panel {
@@ -425,6 +459,14 @@
             border: 2px solid rgba(56, 189, 248, 0.45);
             box-shadow: 0 0 14px rgba(56, 189, 248, 0.22);
             background: #020617;
+        }
+
+        .what-is-flow-slide .neuroscience-note {
+            margin-top: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: clamp(0.72rem, 0.95vw, 0.98rem);
+            line-height: 1.3;
         }
 
         .flow-benefits-slide .glass-panel {
@@ -501,7 +543,7 @@
         }
 
         .flow-benefits-slide .benefit-desc-em {
-            color: #7dd3fc;
+            color: #1dff3b;
             font-weight: 700;
         }
 
@@ -517,7 +559,8 @@
             line-height: 1.9rem;
             font-weight: 700;
             letter-spacing: 0.01em;
-            max-width: 1020px;
+            width: fit-content;
+            max-width: min(1020px, 100%);
             margin-left: auto;
             margin-right: auto;
         }
@@ -792,6 +835,12 @@
             color: #d7e5f8;
             font-size: clamp(0.98rem, 1.45vw, 1.4rem);
             line-height: 1.45;
+        }
+
+        .flow-action-slide .action-key {
+            color: #fbbf24;
+            font-weight: 700;
+            text-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
         }
 
         .flow-action-slide .action-card:nth-child(4) {
@@ -1095,22 +1144,30 @@
         .conditions-flow-slide .conditions-footer {
             margin: 0;
             text-align: center;
-            color: #f8fafc;
+            color: #eaf4ff;
             font-size: clamp(1.18rem, 2.2vw, 2rem);
             line-height: 1.4;
             font-weight: 700;
+            letter-spacing: 0.01em;
+            text-shadow: 0 0 12px rgba(56, 189, 248, 0.22);
         }
 
         .conditions-flow-slide .conditions-footer-highlight {
-            color: #dbeafe;
-            text-decoration: underline;
-            text-decoration-color: rgba(226, 232, 240, 0.9);
-            text-underline-offset: 0.2em;
-            text-decoration-thickness: 2px;
+            color: transparent;
+            background: linear-gradient(90deg, #7dd3fc, #fcd34d);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
 
         .conditions-flow-slide .conditions-footer-percent {
-            color: #ffffff;
+            display: inline-block;
+            padding: 0.02em 0.38em;
+            border-radius: 9999px;
+            color: #0f172a;
+            background: linear-gradient(135deg, #fbbf24, #fb923c);
+            box-shadow:
+                0 0 0 1px rgba(251, 191, 36, 0.38),
+                0 0 14px rgba(251, 146, 60, 0.35);
             font-weight: 800;
         }
 
@@ -1137,6 +1194,110 @@
 
         .quick-flow-slide .quick-card {
             padding: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba(148, 163, 184, 0.34);
+            border-left-width: 5px;
+            background: linear-gradient(165deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.62));
+            box-shadow: 0 10px 24px rgba(2, 6, 23, 0.36);
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+        }
+
+        .quick-flow-slide .quick-card::after {
+            content: "";
+            position: absolute;
+            right: -42px;
+            top: -42px;
+            width: 120px;
+            height: 120px;
+            border-radius: 9999px;
+            background: radial-gradient(circle, rgba(125, 211, 252, 0.26), rgba(125, 211, 252, 0));
+            pointer-events: none;
+        }
+
+        .quick-flow-slide .quick-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px rgba(2, 6, 23, 0.48);
+        }
+
+        .quick-flow-slide .quick-card:nth-child(1) {
+            border-left-color: #22d3ee;
+            background: linear-gradient(165deg, rgba(8, 47, 73, 0.72), rgba(15, 23, 42, 0.78));
+        }
+
+        .quick-flow-slide .quick-card:nth-child(1) h3 {
+            color: #67e8f9 !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(1) p {
+            color: #d6f6ff !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(2) {
+            border-left-color: #f59e0b;
+            background: linear-gradient(165deg, rgba(120, 53, 15, 0.68), rgba(15, 23, 42, 0.78));
+        }
+
+        .quick-flow-slide .quick-card:nth-child(2) h3 {
+            color: #fcd34d !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(2) p {
+            color: #fde9b4 !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(3) {
+            border-left-color: #38bdf8;
+            background: linear-gradient(165deg, rgba(12, 74, 110, 0.72), rgba(15, 23, 42, 0.78));
+        }
+
+        .quick-flow-slide .quick-card:nth-child(3) h3 {
+            color: #7dd3fc !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(3) p {
+            color: #d8f2ff !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(4) {
+            border-left-color: #34d399;
+            background: linear-gradient(165deg, rgba(6, 78, 59, 0.68), rgba(15, 23, 42, 0.78));
+        }
+
+        .quick-flow-slide .quick-card:nth-child(4) h3 {
+            color: #6ee7b7 !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(4) p {
+            color: #d5fbed !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(5) {
+            border-left-color: #a78bfa;
+            background: linear-gradient(165deg, rgba(76, 29, 149, 0.62), rgba(15, 23, 42, 0.78));
+        }
+
+        .quick-flow-slide .quick-card:nth-child(5) h3 {
+            color: #c4b5fd !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(5) p {
+            color: #eaddff !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(6) {
+            border-left-color: #f43f5e;
+            background: linear-gradient(165deg, rgba(127, 29, 29, 0.66), rgba(15, 23, 42, 0.78));
+        }
+
+        .quick-flow-slide .quick-card:nth-child(6) h3 {
+            color: #fda4af !important;
+        }
+
+        .quick-flow-slide .quick-card:nth-child(6) p {
+            color: #ffe0e5 !important;
         }
 
         .quick-flow-slide .quick-card h3 {
@@ -1145,12 +1306,39 @@
             line-height: 1.3;
             font-weight: 700;
             letter-spacing: 0.015em;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: #f8fafc;
+            text-shadow: 0 0 10px rgba(15, 23, 42, 0.35);
+        }
+
+        .quick-flow-slide .quick-card:nth-child(1) h3::before { content: "🔕"; }
+        .quick-flow-slide .quick-card:nth-child(2) h3::before { content: "🧭"; }
+        .quick-flow-slide .quick-card:nth-child(3) h3::before { content: "🫁"; }
+        .quick-flow-slide .quick-card:nth-child(4) h3::before { content: "⏱"; }
+        .quick-flow-slide .quick-card:nth-child(5) h3::before { content: "👁"; }
+        .quick-flow-slide .quick-card:nth-child(6) h3::before { content: "🔁"; }
+
+        .quick-flow-slide .quick-card h3::before {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 9999px;
+            background: rgba(248, 250, 252, 0.12);
+            box-shadow: inset 0 0 0 1px rgba(248, 250, 252, 0.26);
+            font-size: 0.92rem;
+            line-height: 1;
+            flex-shrink: 0;
         }
 
         .quick-flow-slide .quick-card p {
             font-family: 'Prompt', sans-serif;
             font-size: clamp(0.96rem, 1.35vw, 1.36rem);
             line-height: 1.65;
+            color: #e2e8f0;
         }
 
         .quick-flow-slide .quick-image {
@@ -1164,6 +1352,54 @@
 
         .quick-flow-slide .quick-tip {
             font-family: 'Prompt', sans-serif;
+        }
+
+        .enemy-flow-slide .glass-panel {
+            max-width: 1320px;
+        }
+
+        .enemy-flow-slide .bullet-item {
+            font-size: 1.5rem;
+            line-height: 2.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .enemy-flow-slide .bullet-icon {
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            margin-right: 1.2rem;
+        }
+
+        .enemy-flow-slide .enemy-quote-card {
+            padding: 2.2rem;
+            border-radius: 1rem;
+        }
+
+        .enemy-flow-slide .enemy-quote-card p {
+            font-size: 1.5rem;
+            line-height: 2.1rem;
+        }
+
+        .enemy-flow-slide .enemy-key {
+            color: #fcd34d;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(252, 211, 77, 0.28);
+        }
+
+        .enemy-flow-slide .enemy-key-focus {
+            color: #67e8f9;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(103, 232, 249, 0.28);
+        }
+
+        .enemy-flow-slide .enemy-key-alert {
+            color: #fda4af;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(253, 164, 175, 0.25);
+        }
+
+        .enemy-flow-slide .slide-image {
+            max-height: 456px;
         }
 
         @media (min-width: 1024px) {
@@ -1337,8 +1573,22 @@
         }
 
         .quoted-text {
-            color: #fbbf24;
+            color: #ffd772;
             font-weight: 700;
+        }
+
+        .quoted-text-cyan {
+            color: #66e74c;
+            font-weight: 700;
+        }
+
+        .compact-lines-slide .bullet-item {
+            margin-bottom: 0.35rem;
+            line-height: 1.38rem;
+        }
+
+        .compact-lines-slide .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+            margin-top: 0.6rem;
         }
 
         @media (max-width: 768px) {
@@ -1730,7 +1980,7 @@
             </div>
         </section>
 
-        <section class="slide">
+        <section class="slide compact-lines-slide">
             <div class="slide-bg"
                 style="background-image: url('https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=1920&q=80');">
             </div>
@@ -1744,12 +1994,12 @@
                     <div class="flex-1 space-y-6">
                         <div class="bullet-item">
                             <span class="bullet-icon">⏳</span>
-                            <span>ช่วงเวลาที่กำลังจดจ่อกับสิ่งที่ชอบอย่างเต็มที่ ไม่ว่าจะเขียนโค้ด เล่นกีฬา
-                                หรืออ่านหนังสือ</span>
+                            <span>ช่วงเวลาที่กำลังจดจ่อกับสิ่งที่ชอบอย่างเต็มที่ เช่น <strong class="quoted-text-cyan">ทำงาน เล่นกีฬา
+                                อ่านหนังสือ เล่นเกม หรือต่อเลโก้ </strong>หรือทำกิจกรรมที่ชอบอื่น ๆ</span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon">🔋</span>
-                            <span>ความหิวและความง่วงหายไปชั่วขณะ</span>
+                            <span>ความ <strong class="quoted-text">"หิว"</strong> และความ <strong class="quoted-text">"ง่วง" </strong>หายไปชั่วขณะ</span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon">🎯</span>
@@ -1782,11 +2032,11 @@
                         <div class="bullet-item">
                             <span class="bullet-icon">🌊</span>
                             <span>สภาวะที่ <strong class="term-action">"การกระทำ"</strong> และ <strong class="term-focus">"ความสนใจ"</strong>
-                                รวมเป็นหนึ่งเดียว นักกีฬาเรียกว่า "The Zone"</span>
+                                รวมเป็นหนึ่งเดียว นักกีฬาเรียกว่า <strong class="term-psychology">"The Zone"</strong></span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon">⏱️</span>
-                            <span>เวลาผ่านไปโดยไม่รู้ตัว เหมือนเดินช้าลงหรือเร็วขึ้น</span>
+                            <span>เวลาผ่านไปโดยไม่รู้ตัว เหมือนเดินช้าลงหรือเร็วขึ้น และ<strong class="term-science">"ตัวตนหายไป"</strong></span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon">🧠</span>
@@ -1795,10 +2045,6 @@
                         <div class="bullet-item">
                             <span class="bullet-icon">🔬</span>
                             <span><strong class="term-science">เราโฟกัสได้ลึก</strong> งานออกมาดีที่สุดโดยไม่รู้สึกฝืน และมนุษย์ใช้ศักยภาพได้สูงสุดในช่วงนี้</span>
-                        </div>
-                        <div class="speaker-note">
-                            <strong>💡 Neuroscience Insight:</strong>
-                            "งานวิจัยยืนยันว่าในภาวะ Flow State สมองจะตัดการทำงานที่ไม่จำเป็นออก เพื่อให้ใช้พลังงานน้อยลง แต่สร้างผลลัพธ์ที่สูงขึ้น" ช่วยลดความกังวลและสยบเสียงในหัว 
                         </div>
                     </div>
                     <div class="flex-1 flex justify-center w-full">
@@ -1830,6 +2076,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="speaker-note neuroscience-note">
+                    <strong>💡 Neuroscience Insight:</strong>
+                    "งานวิจัยยืนยันว่าในภาวะ Flow State สมองจะตัดการทำงานที่ไม่จำเป็นออก เพื่อให้ใช้พลังงานน้อยลง แต่สร้างผลลัพธ์ที่สูงขึ้น" ช่วยลดความกังวลและสยบเสียงในหัว
+                </div>
             </div>
         </section>
 
@@ -1849,7 +2099,7 @@
                         <span class="benefit-icon">📈</span>
                         <div>
                             <p class="benefit-title"><span class="benefit-key">Productivity</span> &amp; <span class="benefit-key">Quality</span></p>
-                            <p class="benefit-desc">ทะยานสู่จุดสูงสุดแบบ<span class="benefit-desc-em">ก้าวกระโดด</span></p>
+                            <p class="benefit-desc">ทะยานสู่จุดสูงสุดแบบ<span class="benefit-desc-em">...ก้าวกระโดด</span></p>
                         </div>
                     </div>
 
@@ -1865,7 +2115,7 @@
                         <span class="benefit-icon">✨</span>
                         <div>
                             <p class="benefit-title"><span class="benefit-key">The Joy of Process</span></p>
-                            <p class="benefit-desc">สัมผัสความสุขในทุกขณะ - ไม่ใช่แค่รอที่เส้นชัย</p>
+                            <p class="benefit-desc">สัมผัส <span class="benefit-desc-em">ความสุข</span> ในทุกขณะ - ไม่ใช่แค่รอที่เส้นชัย</p>
                         </div>
                     </div>
 
@@ -1894,7 +2144,7 @@
                     </div>
                 </div>
 
-                <p class="benefit-quote">"<span class="benefit-quote-key">FLOW</span>: เครื่องเร่งศักยภาพมนุษย์ - โดยไม่ต้องจ่ายพลังงานเพิ่ม"</p>
+                <p class="benefit-quote">"<span class="benefit-quote-key">FLOW</span>: เครื่องเร่งศักยภาพมนุษย์ - โดยไม่ต้อง..<span class="benefit-quote-key">จ่ายพลังงานเพิ่ม</span>"</p>
             </div>
         </section>
 
@@ -1975,38 +2225,38 @@
                     <div class="action-grid">
                         <article class="action-card">
                             <img src="รูปภาพ6.png" alt="Guitarist playing in rhythm" class="action-image">
-                            <h3 class="action-head">GUITARIST IN RHYTHM</h3>
-                            <p class="action-text">นักดนตรีที่นิ้วไหลไปเองตามจังหวะ</p>
+                            <h3 class="action-head">🎸 GUITARIST IN RHYTHM</h3>
+                            <p class="action-text">นักดนตรีที่<span class="action-key">นิ้วไหลไปเอง</span>ตามจังหวะ</p>
                         </article>
 
                         <article class="action-card">
                             <img src="รูปภาพ7.png" alt="DJ in deep focus" class="action-image">
-                            <h3 class="action-head">DJ IN FOCUS</h3>
-                            <p class="action-text">ดีเจที่รู้สึกเชื่อมกับจังหวะเพลงจนไม่ต้องคิด</p>
+                            <h3 class="action-head">🎧 DJ IN FOCUS</h3>
+                            <p class="action-text">ดีเจที่รู้สึก<span class="action-key">เชื่อมกับจังหวะเพลง</span>จนไม่ต้องคิด</p>
                         </article>
 
                         <article class="action-card">
                             <img src="รูปภาพ8.png" alt="Chef working in flow" class="action-image">
-                            <h3 class="action-head">CHEF AT WORK</h3>
-                            <p class="action-text">เชฟที่ทำอาหารแบบลื่นไหลทั้งรสชาติและการจัดจาน</p>
+                            <h3 class="action-head">👨‍🍳 CHEF AT WORK</h3>
+                            <p class="action-text">เชฟที่ทำอาหารแบบ<span class="action-key">ลื่นไหล</span>ทั้งรสชาติและการจัดจาน</p>
                         </article>
 
                         <article class="action-card">
-                            <img src="รูปภาพ10.png" alt="Coder in deep flow" class="action-image">
-                            <h3 class="action-head">CODER IN FLOW</h3>
-                            <p class="action-text">โปรแกรมเมอร์ที่เข้าภาวะ Deep Work จนแก้ปัญหาได้รวดเร็ว</p>
+                            <img src="รูปภาพ9.png" alt="Coder in deep flow" class="action-image">
+                            <h3 class="action-head">💻 CODER IN FLOW</h3>
+                            <p class="action-text">โปรแกรมเมอร์ที่เข้าภาวะ <span class="action-key">Deep Work</span> จนแก้ปัญหาได้รวดเร็ว</p>
                         </article>
 
                         <article class="action-card">
-                            <img src="รูปภาพ9.png" alt="Athlete moving in the zone" class="action-image">
-                            <h3 class="action-head">ATHLETE IN MOTION</h3>
-                            <p class="action-text">Experiencing "the zone" ความรู้สึกที่เห็นทุกอย่างช้าลง เล่นแล้วทำได้ดี</p>
+                            <img src="รูปภาพ10.png" alt="Athlete moving in the zone" class="action-image">
+                            <h3 class="action-head">🏃 ATHLETE IN MOTION</h3>
+                            <p class="action-text">Experiencing <span class="action-key">"the zone"</span> ความรู้สึกที่เห็นทุกอย่างช้าลง เล่นแล้วทำได้ดี</p>
                         </article>
 
                         <article class="action-card">
                             <img src="Gemini_Generated_Image_teh4gxteh4gxteh4.png" alt="Lego builder in harmony" class="action-image">
-                            <h3 class="action-head">LEGO BUILDER</h3>
-                            <p class="action-text">นักต่อเลโก้ที่หลอมรวมจินตนาการเข้ากับสมาธิอย่างสมบูรณ์แบบ จนโลกภายนอกหายไป เหลือเพียงความสุขในการสร้างสรรค์</p>
+                            <h3 class="action-head">🧱 LEGO BUILDER</h3>
+                            <p class="action-text">นักต่อเลโก้ที่หลอมรวม<span class="action-key">จินตนาการ</span>เข้ากับ<span class="action-key">สมาธิ</span>อย่างสมบูรณ์แบบ จนโลกภายนอกหายไป เหลือเพียง<span class="action-key">ความสุขในการสร้างสรรค์</span></p>
                         </article>
                     </div>
                 </div>
@@ -2187,27 +2437,27 @@
                     <div class="quick-cards-grid flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
                             <h3 class="text-lg font-bold text-orange-400 mb-1">Silence Distractions</h3>
-                            <p class="text-slate-300 text-sm">ปิดการแจ้งเตือนเพื่อสร้างสภาพแวดล้อมที่มีสมาธิและสงบมากขึ้น</p>
+                            <p class="text-slate-300 text-sm"><span class="quick-key">ปิดการแจ้งเตือน</span> เพื่อสร้างสภาพแวดล้อมที่<span class="quick-key">มีสมาธิและสงบมากขึ้น</span></p>
                         </div>
                         <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
                             <h3 class="text-lg font-bold text-orange-400 mb-1">Set Intention</h3>
-                            <p class="text-slate-300 text-sm">กำหนดเจตนาที่ชัดเจนเพียงหนึ่งเดียวเพื่อชี้นำการกระทำของคุณให้บรรลุผลสำเร็จ</p>
+                            <p class="text-slate-300 text-sm">กำหนด<span class="quick-key">เจตนาที่ชัดเจนเพียงหนึ่งเดียว</span>เพื่อชี้นำการกระทำของคุณให้<span class="quick-key">บรรลุผลสำเร็จ</span></p>
                         </div>
                         <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
                             <h3 class="text-lg font-bold text-orange-400 mb-1">Deep Breaths</h3>
-                            <p class="text-slate-300 text-sm">4-4-8 <span class="quick-key">เพื่อให้จิตใจสงบและผ่อนคลายก่อนสิ่งที่จะเริ่มทำ</span></p>
+                            <p class="text-slate-300 text-sm"><span class="quick-key">4-4-8</span> <span class="quick-key">เพื่อให้จิตใจสงบและผ่อนคลายก่อนสิ่งที่จะเริ่มทำ</span></p>
                         </div>
                         <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
                             <h3 class="text-lg font-bold text-orange-400 mb-1">Set Time Block</h3>
-                            <p class="text-slate-300 text-sm">ตั้งเวลางานที่จะทำ อย่างน้อย 1-2 ชั่วโมงโดยไม่ถูกรบกวน</p>
+                            <p class="text-slate-300 text-sm">ตั้งเวลางานที่จะทำ อย่างน้อย <span class="quick-key">1-2 ชั่วโมง</span> โดย<span class="quick-key">ไม่ถูกรบกวน</span></p>
                         </div>
                         <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
                             <h3 class="text-lg font-bold text-orange-400 mb-1">Observe Flow</h3>
-                            <p class="text-slate-300 text-sm">ฝึกสติอยู่กับปัจจุบัน การทำสมาธิ การฝึก Focus หรือ ใส่ใจสิ่งเล็กๆ รอบๆตัว</p>
+                            <p class="text-slate-300 text-sm"><span class="quick-key">ฝึกสติอยู่กับปัจจุบัน</span> การทำสมาธิ การฝึก <span class="quick-key">Focus</span> หรือ ใส่ใจสิ่งเล็กๆ รอบๆตัว</p>
                         </div>
                         <div class="quick-card bg-slate-800/60 p-4 rounded-xl border border-slate-600">
                             <h3 class="text-lg font-bold text-orange-400 mb-1">Reduce Switching</h3>
-                            <p class="text-slate-300 text-sm">เทคนิค Single-tasking ไม่ทำหลายอย่างพร้อมกันเพื่อเพิ่มสมาธิและรักษาสมาธิในการทำงานให้ลึกยิ่งขึ้น</p>
+                            <p class="text-slate-300 text-sm">เทคนิค <span class="quick-key">Single-tasking</span> ไม่ทำหลายอย่างพร้อมกันเพื่อเพิ่มสมาธิและรักษาสมาธิในการ<span class="quick-key">ทำงานให้ลึกยิ่งขึ้น</span></p>
                         </div>
                     </div>
 
@@ -2222,9 +2472,9 @@
             </div>
         </section>
 
-        <section class="slide">
+        <section class="slide enemy-flow-slide">
             <div class="slide-bg"
-                style="background-image: url('https://images.unsplash.com/photo-1580894742597-87bc8789db3d?auto=format&fit=crop&w=1920&q=80'); opacity: 0.2;">
+                style="background-image: url('unnamed.jpg'); opacity: 0.2;">
             </div>
             <div class="slide-overlay"></div>
 
@@ -2236,24 +2486,24 @@
                     <div class="flex-1 space-y-6">
                         <div class="bullet-item">
                             <span class="bullet-icon text-red-400">🤹</span>
-                            <span><strong>Multitasking</strong> (การทำหลายอย่างพร้อมกัน) ทำให้สมองสูญเสียจุดโฟกัส</span>
+                            <span><strong class="enemy-key">Multitasking</strong> (การทำหลายอย่างพร้อมกัน) ทำให้สมองสูญเสีย<span class="enemy-key-focus">จุดโฟกัส</span></span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon text-red-400">📱</span>
-                            <span>การแจ้งเตือนจากมือถือ (Notifications) ดึงความสนใจออกจากงานทันที</span>
+                            <span>การแจ้งเตือนจากมือถือ (<span class="enemy-key">Notifications</span>) ดึงความสนใจออกจากงานทันที</span>
                         </div>
                         <div class="bullet-item">
                             <span class="bullet-icon text-red-400">⚠️</span>
-                            <span>การสลับหน้าจอบ่อยๆ ทำให้ <strong>Error rate พุ่งสูงถึง 50%</strong></span>
+                            <span>การสลับหน้าจอบ่อยๆ ทำให้ <strong class="enemy-key-alert">Error rate พุ่งสูงถึง 50%</strong></span>
                         </div>
-                        <div class="mt-8 p-6 bg-slate-900/80 rounded-xl border border-red-500/30 text-center shadow-lg">
+                        <div class="enemy-quote-card mt-8 p-6 bg-slate-900/80 rounded-xl border border-red-500/30 text-center shadow-lg">
                             <p class="text-xl font-bold text-white tracking-wide leading-relaxed">
-                                "คนที่คุมสิ่งรบกวนได้ <br>คือคนที่คุม <span class="text-orange-400">FLOW</span> ได้"
+                                "คนที่<span class="enemy-key">คุมสิ่งรบกวนได้</span> <br>คือคนที่คุม <span class="text-orange-400 enemy-key">FLOW</span> ได้"
                             </p>
                         </div>
                     </div>
                     <div class="flex-1 w-full flex justify-center">
-                        <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=800&q=80"
+                        <img src="unnamedX.jpg"
                             alt="Lots of notifications and screens" class="slide-image border-red-500/30">
                     </div>
                 </div>
